@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './index.css';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-inner">
-        <a href="/" className="logo">
+        <a href="#/" className="logo">
           <div className="logo-leaf">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" strokeWidth="2.5"><path d="M12 22s8-4 8-10a8 8 0 1 0-16 0c0 6 8 10 8 10z"/><path d="M12 22V12"/><path d="M12 12C10 10 6 9 4 12"/></svg>
           </div>
@@ -81,7 +81,7 @@ function FloatingWA() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/biofuture-website">
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -93,6 +93,6 @@ export default function App() {
       </Routes>
       <Footer />
       <FloatingWA />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
