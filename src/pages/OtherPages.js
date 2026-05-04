@@ -122,7 +122,7 @@ export function Contact() {
                 <div className="card-body" style={{padding:0}}>
                   <iframe
                     title="RDN Bio Products Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.0!2d78.5500!3d17.3300!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE5JzQ4LjAiTiA3OMKwMzMnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115.89!2d78.5300743!3d17.3456978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99003e3adc29%3A0x8cb137ae52564078!2sRDN%20Bio%20Products%20LLP!5e0!3m2!1sen!2sin!4v1234567890"
                     width="100%" height="220" style={{border:0,display:'block'}} allowFullScreen loading="lazy"
                   ></iframe>
                   <div style={{padding:'12px 16px',fontSize:12,color:'#777',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
