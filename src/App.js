@@ -81,7 +81,7 @@ function FloatingWA() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/biofuture-website">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
