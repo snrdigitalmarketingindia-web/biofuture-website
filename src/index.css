@@ -399,3 +399,151 @@ a { text-decoration: none; color: inherit; }
   .footer-grid { grid-template-columns: 1fr; gap: 20px; }
   .section-title { font-size: 26px; }
 }
+
+/* ===== MOBILE RESPONSIVE — FULL FIX ===== */
+
+/* Hero grid */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-img {
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(59,109,17,0.15);
+}
+
+/* Badges grid */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Enquiry grid */
+.enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green-dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #e8f0dc;
+  padding: 16px 24px;
+  z-index: 99;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  border-bottom: 1px solid #f0f5e8;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-wa-btn span { display: none; }
+
+  /* Hero */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-img {
+    height: 260px;
+    order: -1;
+  }
+
+  /* Badges */
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Products */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Enquiry */
+  .enquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  /* Forms */
+  .form-grid { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  /* Section */
+  .section-title { font-size: 24px; }
+  .page-hero { padding: 36px 0 28px; }
+
+  /* Spec tables */
+  .spec-table { display: block; overflow-x: auto; white-space: nowrap; }
+
+  /* Cards */
+  .card-body { padding: 12px; }
+
+  /* About grid */
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .about-values {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .about-drdo {
+    grid-template-columns: 1fr !important;
+  }
+  .about-drdo img { display: none; }
+}
+
+@media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr; }
+  .badges-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-img { height: 220px; }
+}
