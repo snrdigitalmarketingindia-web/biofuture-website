@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/biofuture-website/static/css/main.786c316c.css",
-    "main.js": "/biofuture-website/static/js/main.aa464979.js",
-    "index.html": "/biofuture-website/index.html",
-    "main.786c316c.css.map": "/biofuture-website/static/css/main.786c316c.css.map",
-    "main.aa464979.js.map": "/biofuture-website/static/js/main.aa464979.js.map"
+    "main.css": "/static/css/main.786c316c.css",
+    "main.js": "/static/js/main.fbb2c29e.js",
+    "index.html": "/index.html",
+    "main.786c316c.css.map": "/static/css/main.786c316c.css.map",
+    "main.fbb2c29e.js.map": "/static/js/main.fbb2c29e.js.map"
   },
   "entrypoints": [
     "static/css/main.786c316c.css",
-    "static/js/main.aa464979.js"
+    "static/js/main.fbb2c29e.js"
   ]
 }
