@@ -21,7 +21,7 @@ function Navbar() {
           BioFuture
         </a>
         <ul className="nav-links">
-          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/products">Products</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/gallery">Gallery</NavLink></li>
