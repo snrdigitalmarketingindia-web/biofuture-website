@@ -15,7 +15,7 @@ const values = [
 const timeline = [
   { title: 'Founded — RDN Bio Products LLP', desc: 'Registered in Hyderabad, Telangana with a focus on eco-friendly packaging solutions.' },
   { title: 'DRDO technology certification', desc: 'Products certified under DRDO standards — validating our quality and safety commitment.' },
-  { title: 'BioFuture brand launched', desc: 'Launched 6 product categories covering carry bags, garbage bags, pouches, butter covers and bio granules.' },
+  { title: 'RDN Bio Products brand launched', desc: 'Launched 6 product categories covering carry bags, garbage bags, pouches, butter covers and bio granules.' },
   { title: 'Today — pan India supply', desc: 'Serving retail, hospitals, restaurants, temples, and institutions across India.', current: true },
 ];
 
@@ -55,14 +55,14 @@ export default function About() {
             <div>
               <h2 className="section-title">Backed by DRDO-certified technology</h2>
               <p style={{fontSize:15,color:'#555',lineHeight:1.8,marginBottom:16}}>
-                BioFuture products are manufactured using technology certified by the Defence Research and Development Organisation (DRDO), Government of India — one of the most rigorous quality and safety standards in the country.
+                RDN Bio Products are manufactured using technology certified by the Defence Research and Development Organisation (DRDO), Government of India — one of the most rigorous quality and safety standards in the country.
               </p>
               <p style={{fontSize:15,color:'#555',lineHeight:1.8}}>
                 This means every bag meets strict standards for biodegradability, non-toxicity, and material safety — giving buyers complete confidence in what they're using.
               </p>
             </div>
-            <div style={{width:160,height:160,background:'#fff',border:'1px solid #d4e8b0',borderRadius:16,display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',gap:8,flexShrink:0}}>
-              <div style={{fontSize:13,color:'#aaa',textAlign:'center'}}>DRDO logo<br/>placeholder</div>
+            <div style={{width:160,height:160,flexShrink:0}}>
+              <img src="drdo-logo.png" alt="DRDO — Defence Research and Development Organisation" style={{width:'100%',height:'100%',objectFit:'contain'}} />
             </div>
           </div>
         </div>

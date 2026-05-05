@@ -21,7 +21,7 @@ export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const lines = [
-      `Hi, I'd like a quote from BioFuture.`,
+      `Hi, I'd like a quote from RDN Bio Products.`,
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
       `Product: ${form.product}`,
@@ -167,7 +167,7 @@ export default function Home() {
               </a>
               <p style={{fontSize:12,color:'#aaa',marginTop:8}}>Typically replies within 1 hour</p>
               <div style={{marginTop:24,textAlign:'center'}}>
-                <img src="logo-badge.png" alt="RDN Bio Products LLP — Biodegradable Bags" style={{width:160,height:160,objectFit:'contain'}} />
+                <img src="rdn-logo.png" alt="RDN Bio Products LLP — Biodegradable Bags" style={{width:160,height:160,objectFit:'contain'}} />
               </div>
             </div>
           </div>
