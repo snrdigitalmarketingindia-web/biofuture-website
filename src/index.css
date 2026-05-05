@@ -693,6 +693,40 @@ a { text-decoration: none; color: inherit; }
   .testimonial-card { padding: 22px 18px 18px; }
 }
 
+/* ===== PRODUCT PAGE IMAGE LAYOUT ===== */
+.product-card-inner {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.product-card-img {
+  width: 200px;
+  min-width: 200px;
+  background: #5cb81c;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  flex-shrink: 0;
+}
+.product-card-content {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 768px) {
+  .product-card-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .product-card-img {
+    width: 100%;
+    min-width: unset;
+    min-height: 180px;
+  }
+}
+
 /* ===== CUSTOMISATION PAGE ===== */
 .custom-options-grid {
   display: grid;

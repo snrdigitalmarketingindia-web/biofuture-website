@@ -38,7 +38,7 @@ function EnquiryForm({ product }) {
   );
 }
 
-function ProductCard({ id, title, subtitle, badge, children, product }) {
+function ProductCard({ id, title, subtitle, badge, photo, children, product }) {
   return (
     <div id={id} className="card" style={{marginBottom:24}}>
       <div className="card-header">
@@ -49,8 +49,17 @@ function ProductCard({ id, title, subtitle, badge, children, product }) {
         {badge && <span className="pill">{badge}</span>}
       </div>
       <div className="card-body">
-        {children}
-        <EnquiryForm product={product || title} />
+        <div className="product-card-inner">
+          {photo && (
+            <div className="product-card-img">
+              <img src={photo} alt={title} style={{width:'100%',height:'100%',objectFit:'contain'}} />
+            </div>
+          )}
+          <div className="product-card-content">
+            {children}
+            <EnquiryForm product={product || title} />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -88,7 +97,7 @@ export default function Products() {
         <div className="container">
 
           {show('d-cut') && (
-            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" product="D-Cut bags">
+            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" photo="dcut-bag.png" product="D-Cut bags">
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>
@@ -101,7 +110,7 @@ export default function Products() {
           )}
 
           {show('u-cut') && (
-            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" product="U/W-Cut bags">
+            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" photo="ucut-bag.png" product="U/W-Cut bags">
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -117,7 +126,7 @@ export default function Products() {
           )}
 
           {show('garbage') && (
-            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" product="Garbage bags">
+            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" photo="garbage-bag.png" product="Garbage bags">
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -132,40 +141,48 @@ export default function Products() {
 
           {show('pouches') && (
             <div id="pouches" className="card" style={{marginBottom:24}}>
-              <div className="card-header"><div><h3>Pouches & grocery bags</h3><p>Packaging, food, grocery — multiple sizes</p></div></div>
+              <div className="card-header"><div><h3>Pouches & grocery bags</h3><p>Packaging, food, grocery — multiple sizes</p></div><span className="pill">12 sizes</span></div>
               <div className="card-body">
-                <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:20,marginBottom:16}}>
-                  <div>
-                    <h4 style={{fontSize:14,fontWeight:600,color:'var(--green-dark)',marginBottom:10}}>Pouches</h4>
-                    <table className="spec-table">
-                      <thead><tr><th>Size</th><th>Microns</th><th>Pcs</th><th>Load</th></tr></thead>
-                      <tbody>
-                        {[['4×6',40,500,'50g'],['5×7',40,400,'50g'],['7×10',35,220,'100g'],['8×11',35,200,'150g']].map(r=>(
-                          <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td></tr>
-                        ))}
-                      </tbody>
-                    </table>
+                <div className="product-card-inner">
+                  <div className="product-card-img" style={{display:'flex',flexDirection:'column',gap:8}}>
+                    <img src="pouches-bag.png" alt="Pouches" style={{width:'100%',height:'50%',objectFit:'contain'}} />
+                    <img src="pouches2-bag.png" alt="Grocery bags" style={{width:'100%',height:'50%',objectFit:'contain'}} />
                   </div>
-                  <div>
-                    <h4 style={{fontSize:14,fontWeight:600,color:'var(--green-dark)',marginBottom:10}}>Grocery bags</h4>
-                    <table className="spec-table">
-                      <thead><tr><th>Size</th><th>Microns</th><th>Pcs</th><th>Load</th></tr></thead>
-                      <tbody>
-                        {[['5×8',30,450,'0.100 kg'],['6×9',30,250,'0.250 kg'],['7×10',30,220,'0.500 kg'],['8×12',30,180,'1.000 kg'],
-                          ['9×15',35,145,'2.000 kg'],['10×17',40,110,'3.000 kg'],['13×20',45,55,'5.000 kg'],['16×24',45,40,'10.000 kg']].map(r=>(
-                          <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td></tr>
-                        ))}
-                      </tbody>
-                    </table>
+                  <div className="product-card-content">
+                    <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16}}>
+                      <div>
+                        <h4 style={{fontSize:14,fontWeight:600,color:'var(--green-dark)',marginBottom:10}}>Pouches</h4>
+                        <table className="spec-table">
+                          <thead><tr><th>Size</th><th>Microns</th><th>Pcs</th><th>Load</th></tr></thead>
+                          <tbody>
+                            {[['4×6',40,500,'50g'],['5×7',40,400,'50g'],['7×10',35,220,'100g'],['8×11',35,200,'150g']].map(r=>(
+                              <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td></tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4 style={{fontSize:14,fontWeight:600,color:'var(--green-dark)',marginBottom:10}}>Grocery bags</h4>
+                        <table className="spec-table">
+                          <thead><tr><th>Size</th><th>Microns</th><th>Pcs</th><th>Load</th></tr></thead>
+                          <tbody>
+                            {[['5×8',30,450,'0.100 kg'],['6×9',30,250,'0.250 kg'],['7×10',30,220,'0.500 kg'],['8×12',30,180,'1.000 kg'],
+                              ['9×15',35,145,'2.000 kg'],['10×17',40,110,'3.000 kg'],['13×20',45,55,'5.000 kg'],['16×24',45,40,'10.000 kg']].map(r=>(
+                              <tr key={r[0]}><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td></tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <EnquiryForm product="Pouches / Grocery bags" />
                   </div>
                 </div>
-                <EnquiryForm product="Pouches / Grocery bags" />
               </div>
             </div>
           )}
 
           {show('butter') && (
-            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" product="Butter covers">
+            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" photo="butter-bag.png" product="Butter covers">
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>
@@ -179,12 +196,19 @@ export default function Products() {
 
           {show('granules') && (
             <div id="granules" className="card" style={{marginBottom:24}}>
-              <div className="card-header"><div><h3>Bio compound granules</h3><p>Raw material for manufacturers</p></div></div>
+              <div className="card-header"><div><h3>Bio compound granules</h3><p>Raw material for manufacturers</p></div><span className="pill">Fillers & PBAT</span></div>
               <div className="card-body">
-                <p style={{fontSize:14,color:'#555',lineHeight:1.7,marginBottom:16}}>
-                  PBAT-based fillers & granules. Raw material for manufacturers seeking to produce their own biodegradable bags. Available in bulk quantities. Contact us for grade specifications and pricing.
-                </p>
-                <EnquiryForm product="Bio compound granules" />
+                <div className="product-card-inner">
+                  <div className="product-card-img">
+                    <img src="granules.png" alt="Bio compound granules" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                  </div>
+                  <div className="product-card-content">
+                    <p style={{fontSize:14,color:'#555',lineHeight:1.7,marginBottom:16}}>
+                      PBAT-based fillers & granules. Raw material for manufacturers seeking to produce their own biodegradable bags. Available in bulk quantities. Contact us for grade specifications and pricing.
+                    </p>
+                    <EnquiryForm product="Bio compound granules" />
+                  </div>
+                </div>
               </div>
             </div>
           )}
