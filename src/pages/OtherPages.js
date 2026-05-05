@@ -56,7 +56,20 @@ export function Gallery() {
 export function Contact() {
   const [form, setForm] = useState({ name:'', phone:'', email:'', subject:'', message:'' });
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setForm({ name:'', phone:'', email:'', subject:'', message:'' }); };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const lines = [
+      `Hi, I'm contacting BioFuture.`,
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      form.email   ? `Email: ${form.email}`     : null,
+      form.subject ? `Subject: ${form.subject}` : null,
+      form.message ? `Message: ${form.message}` : null,
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/917301222666?text=${encodeURIComponent(lines)}`, '_blank');
+    setSubmitted(true);
+    setForm({ name:'', phone:'', email:'', subject:'', message:'' });
+  };
 
   const WA_CONTACT = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
