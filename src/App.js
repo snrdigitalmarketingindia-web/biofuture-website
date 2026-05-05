@@ -21,7 +21,7 @@ function Navbar() {
           <div className="logo-leaf">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" strokeWidth="2.5"><path d="M12 22s8-4 8-10a8 8 0 1 0-16 0c0 6 8 10 8 10z"/><path d="M12 22V12"/><path d="M12 12C10 10 6 9 4 12"/></svg>
           </div>
-          BioFuture
+          RDN Bio Products
         </a>
         <ul className="nav-links">
           <li><NavLink to="/">Home</NavLink></li>
