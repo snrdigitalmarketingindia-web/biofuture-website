@@ -157,7 +157,7 @@ export function Contact() {
                     <input className="form-input" style={{width:'100%',marginBottom:8}} placeholder="Subject — e.g. bulk order, product query" value={form.subject} onChange={e=>setForm({...form,subject:e.target.value})} required />
                     <textarea className="form-input" style={{width:'100%',height:80,resize:'vertical'}} placeholder="Your message..." value={form.message} onChange={e=>setForm({...form,message:e.target.value})} required />
                     <button type="submit" className="submit-btn">Send message</button>
-                    {submitted && <div className="success-msg show">✓ Message sent! We'll get back to you soon.</div>}
+                    {submitted && <div className="success-msg show">✓ WhatsApp is opening — just tap Send to reach us!</div>}
                   </form>
                 </div>
               </div>

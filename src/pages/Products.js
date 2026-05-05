@@ -31,7 +31,7 @@ function EnquiryForm({ product }) {
           <input className="form-input form-full" placeholder="Special requirement (color, print, custom size...)" value={form.note} onChange={e=>setForm({...form,note:e.target.value})} />
         </div>
         <button type="submit" className="submit-btn">Send enquiry for {product}</button>
-        {submitted && <div className="success-msg show">✓ Enquiry sent! We'll WhatsApp you back within the hour.</div>}
+        {submitted && <div className="success-msg show">✓ WhatsApp is opening — just tap Send to reach us!</div>}
       </form>
     </div>
   );
