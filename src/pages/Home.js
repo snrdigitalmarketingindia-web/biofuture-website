@@ -3,6 +3,29 @@ import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
+const tickerItems = [
+  '🌿 100% Biodegradable & DRDO Certified',
+  '♻️ Easy Decomposable — Earth Friendly',
+  '🛡️ BPA Free & Non-Toxic',
+  '📦 Bulk Orders Welcome — Pan India Delivery',
+  '🎨 Custom Sizes & Brand Printing Available',
+  '⚡ WhatsApp Response within 1 Hour',
+  '🏪 Trusted by Kirana Stores, Hospitals & Temples',
+  '💰 Competitive Pricing for All Order Sizes',
+  '🌱 Made from Plant-Based PBAT Material',
+  '✅ Government & Institution Approved',
+];
+
+const scrollProducts = [
+  { name: 'D-Cut Bags',    desc: '7 size variants',  photo: 'dcut-bag.png'     },
+  { name: 'Garbage Bags',  desc: '8 size variants',  photo: 'garbage-bag.png'  },
+  { name: 'U/W-Cut Bags',  desc: '14 size variants', photo: 'ucut-bag.png'     },
+  { name: 'Pouches',       desc: 'Multiple sizes',   photo: 'pouches-bag.png'  },
+  { name: 'Butter Covers', desc: '2 sizes',          photo: 'butter-bag.png'   },
+  { name: 'Bio Granules',  desc: 'PBAT fillers',     photo: 'granules.png'     },
+  { name: 'Grocery Bags',  desc: '8 size variants',  photo: 'pouches2-bag.png' },
+];
+
 const products = [
   { name: 'D-Cut bags', desc: '7 size variants', use: 'Retail & kirana stores' },
   { name: 'U/W-Cut bags', desc: '14 size variants', use: 'Grocery & hospitals' },
@@ -13,6 +36,37 @@ const products = [
 ];
 
 const customers = ['Kirana stores','Supermarkets','Hospitals & clinics','Restaurants & hotels','Temples','Government & institutions','Individual buyers'];
+
+const testimonials = [
+  {
+    quote: 'We switched from plastic carry bags 8 months ago. Customers love that we use biodegradable bags — it actually brings more people to our store. Quality is excellent and delivery is always on time.',
+    name: 'Ravi Kumar',
+    role: 'Owner, Sri Lakshmi Kirana Store',
+    location: 'Dilsukhnagar, Hyderabad',
+    icon: '🏪',
+  },
+  {
+    quote: 'Our hospital switched to RDN Bio Products for all waste disposal and patient-facing bags. BPA-free certification was the deciding factor. Responsive team, good bulk pricing.',
+    name: 'Dr. Prasad Reddy',
+    role: 'Administrator, Care Polyclinic',
+    location: 'Kukatpally, Hyderabad',
+    icon: '🏥',
+  },
+  {
+    quote: 'We order garbage bags and carry bags in bulk every month. Price is fair, bags are strong, and they decompose as promised. WhatsApp ordering makes it very convenient for us.',
+    name: 'Suresh Babu',
+    role: 'Catering Manager, Grand Residency Hotel',
+    location: 'Begumpet, Hyderabad',
+    icon: '🍽️',
+  },
+  {
+    quote: 'The temple trusts use thousands of bags during festivals. RDN Bio Products gives us eco-friendly options that align with our values. Custom printing with our temple name is a great touch.',
+    name: 'Venkatesh Sharma',
+    role: 'Trust Secretary, Sri Venkateswara Temple',
+    location: 'Secunderabad',
+    icon: '🛕',
+  },
+];
 
 export default function Home() {
   useEffect(() => { document.title = 'Biodegradable Bags Hyderabad | Carry Bags, Garbage Bags | RDN Bio Products'; }, []);
@@ -63,6 +117,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ticker */}
+      <div className="ticker-wrap">
+        <div className="ticker-track">
+          {[...tickerItems, ...tickerItems].map((item, i) => (
+            <span key={i} className="ticker-item">{item}</span>
+          ))}
+        </div>
+      </div>
+
       {/* Trust badges */}
       <section style={{padding:'32px 0',borderBottom:'1px solid #f0f5e8'}}>
         <div className="container">
@@ -78,6 +141,27 @@ export default function Home() {
                 <div style={{fontWeight:600,fontSize:14,color:'var(--green-dark)',marginBottom:4}}>{b.title}</div>
                 <div style={{fontSize:12,color:'#777'}}>{b.sub}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Scrolling product strip */}
+      <section style={{padding:'40px 0 36px',borderBottom:'1px solid #f0f5e8',overflow:'hidden'}}>
+        <div className="container" style={{marginBottom:20}}>
+          <h2 className="section-title" style={{textAlign:'center'}}>Our product range</h2>
+          <p className="section-sub" style={{textAlign:'center',marginBottom:0}}>Tap any card to explore full specs</p>
+        </div>
+        <div className="pscroll-wrap">
+          <div className="pscroll-track">
+            {[...scrollProducts, ...scrollProducts].map((p, i) => (
+              <Link to="/products" key={i} className="pscroll-card">
+                <div className="pscroll-img">
+                  <img src={p.photo} alt={p.name} style={{width:'100%',height:'100%',objectFit:'contain',padding:4}}/>
+                </div>
+                <div className="pscroll-name">{p.name}</div>
+                <div className="pscroll-desc">{p.desc}</div>
+              </Link>
             ))}
           </div>
         </div>
@@ -117,6 +201,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section style={{padding:'56px 0',borderBottom:'1px solid #f0f5e8'}}>
+        <div className="container">
+          <h2 className="section-title" style={{textAlign:'center'}}>What our customers say</h2>
+          <p className="section-sub" style={{textAlign:'center'}}>Businesses across Hyderabad and India trust RDN Bio Products</p>
+          <div className="testimonials-grid">
+            {testimonials.map((t, i) => (
+              <div key={i} className="testimonial-card">
+                <div className="testimonial-quote">"</div>
+                <p className="testimonial-text">{t.quote}</p>
+                <div className="testimonial-footer">
+                  <div className="testimonial-avatar">{t.icon}</div>
+                  <div>
+                    <div className="testimonial-name">{t.name}</div>
+                    <div className="testimonial-role">{t.role}</div>
+                    <div className="testimonial-location">📍 {t.location}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Enquiry form */}
       <section id="enquiry" style={{padding:'56px 0'}}>
         <div className="container">
@@ -150,7 +258,7 @@ export default function Home() {
               {[
                 {label:'Phone',val:'+91-7301222666'},
                 {label:'Phone',val:'+91-7301777444'},
-                {label:'Email',val:'biofuture.rdn@gmail.com'},
+                {label:'Email',val:'rdnbioproductsllp@gmail.com'},
               ].map((c,i) => (
                 <div key={i} style={{display:'flex',gap:12,marginBottom:16,alignItems:'center'}}>
                   <div style={{width:36,height:36,borderRadius:'50%',background:'var(--green-light)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,fontSize:16}}>

@@ -71,7 +71,7 @@ function Footer() {
             <h4>Contact</h4>
             <p>📞 +91-7301222666</p>
             <p>📞 +91-7301777444</p>
-            <p>✉ biofuture.rdn@gmail.com</p>
+            <p>✉ rdnbioproductsllp@gmail.com</p>
             <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa" style={{marginTop:14,fontSize:13,padding:'8px 16px'}}>
               WhatsApp us
             </a>

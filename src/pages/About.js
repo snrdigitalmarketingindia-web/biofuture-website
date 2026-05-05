@@ -13,10 +13,10 @@ const values = [
 ];
 
 const timeline = [
-  { title: 'Founded — RDN Bio Products LLP', desc: 'Registered in Hyderabad, Telangana with a focus on eco-friendly packaging solutions.' },
-  { title: 'DRDO technology certification', desc: 'Products certified under DRDO standards — validating our quality and safety commitment.' },
-  { title: 'RDN Bio Products brand launched', desc: 'Launched 6 product categories covering carry bags, garbage bags, pouches, butter covers and bio granules.' },
-  { title: 'Today — pan India supply', desc: 'Serving retail, hospitals, restaurants, temples, and institutions across India.', current: true },
+  { year: 'Aug 2024', title: 'Incorporated — RDN Bio Products LLP', desc: 'Registered on 16 August 2024 under the Ministry of Corporate Affairs (LLPIN: ACI-9987), Hyderabad, Telangana.' },
+  { year: '2024', title: 'DRDO technology certification', desc: 'Products certified using DRDO-backed technology standards — validating biodegradability, non-toxicity, and material safety.' },
+  { year: 'Oct 2024', title: 'BioFuture brand launched', desc: 'Launched 6 product categories: D-Cut bags, U/W-Cut bags, Garbage bags, Pouches, Butter covers and Bio compound granules.' },
+  { year: '2025', title: 'Today — pan India supply', desc: 'Serving kirana stores, hospitals, restaurants, temples, and institutions across India.', current: true },
 ];
 
 const states = ['Hyderabad','Telangana','Andhra Pradesh','Tamil Nadu','Karnataka','Maharashtra','Delhi NCR','+ all states'];
@@ -94,10 +94,13 @@ export default function About() {
           <div style={{position:'relative',paddingLeft:32}}>
             <div style={{position:'absolute',left:7,top:8,bottom:8,width:1,background:'#d4e8b0'}}></div>
             {timeline.map((t,i)=>(
-              <div key={i} style={{position:'relative',marginBottom:32}}>
-                <div style={{position:'absolute',left:-32,top:4,width:14,height:14,borderRadius:'50%',background:t.current?'var(--green-mid)':'var(--green-dark)',border:'2px solid #fff',boxShadow:'0 0 0 2px '+(t.current?'var(--green-mid)':'var(--green-dark)')}}></div>
-                <div style={{fontWeight:600,fontSize:15,color:t.current?'var(--green-mid)':'var(--green-dark)',marginBottom:4}}>{t.title}</div>
-                <div style={{fontSize:13,color:'#666',lineHeight:1.6}}>{t.desc}</div>
+              <div key={i} style={{position:'relative',marginBottom:36}}>
+                <div style={{position:'absolute',left:-32,top:6,width:14,height:14,borderRadius:'50%',background:t.current?'#5cb81c':'var(--green-dark)',border:'2px solid #fff',boxShadow:'0 0 0 2px '+(t.current?'#5cb81c':'var(--green-dark)')}}></div>
+                <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:5}}>
+                  <span style={{background:t.current?'#5cb81c':'var(--green-dark)',color:'#fff',fontSize:11,fontWeight:700,padding:'2px 10px',borderRadius:20}}>{t.year}</span>
+                  <span style={{fontWeight:700,fontSize:15,color:t.current?'#5cb81c':'var(--green-dark)'}}>{t.title}</span>
+                </div>
+                <div style={{fontSize:13,color:'#666',lineHeight:1.65}}>{t.desc}</div>
               </div>
             ))}
           </div>
