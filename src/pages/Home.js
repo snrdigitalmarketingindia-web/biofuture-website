@@ -141,7 +141,7 @@ export default function Home() {
                   <input className="form-input form-full" placeholder="Organisation / shop name (optional)" value={form.org} onChange={e=>setForm({...form,org:e.target.value})} />
                 </div>
                 <button type="submit" className="submit-btn">Send enquiry</button>
-                {submitted && <div className="success-msg show">✓ Thank you! We'll WhatsApp you back within the hour.</div>}
+                {submitted && <div className="success-msg show">✓ WhatsApp is opening — just tap Send to reach us!</div>}
               </form>
             </div>
             <div>
