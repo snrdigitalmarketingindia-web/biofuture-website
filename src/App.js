@@ -26,8 +26,9 @@ function Navbar() {
         <ul className="nav-links">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/products">Products</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/gallery">Gallery</NavLink></li>
+          <li><NavLink to="/customisation">Customise</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
         <a href={WA_LINK} target="_blank" rel="noreferrer" className="nav-wa-btn">
@@ -43,8 +44,9 @@ function Navbar() {
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         <NavLink to="/" onClick={close}>Home</NavLink>
         <NavLink to="/products" onClick={close}>Products</NavLink>
-        <NavLink to="/about" onClick={close}>About</NavLink>
         <NavLink to="/gallery" onClick={close}>Gallery</NavLink>
+        <NavLink to="/customisation" onClick={close}>Customise</NavLink>
+        <NavLink to="/about" onClick={close}>About</NavLink>
         <NavLink to="/contact" onClick={close}>Contact</NavLink>
         <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={close}>WhatsApp us</a>
       </div>
