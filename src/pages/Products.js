@@ -5,7 +5,20 @@ const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in
 function EnquiryForm({ product }) {
   const [form, setForm] = useState({ name:'', phone:'', size:'', qty:'', note:'' });
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setForm({ name:'', phone:'', size:'', qty:'', note:'' }); };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const lines = [
+      `Hi, I'd like to enquire about ${product}.`,
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      form.size ? `Size: ${form.size}`           : null,
+      form.qty  ? `Quantity: ${form.qty}`        : null,
+      form.note ? `Special requirement: ${form.note}` : null,
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/917301222666?text=${encodeURIComponent(lines)}`, '_blank');
+    setSubmitted(true);
+    setForm({ name:'', phone:'', size:'', qty:'', note:'' });
+  };
   return (
     <div className="enquiry-form">
       <h4>Enquire about {product}</h4>

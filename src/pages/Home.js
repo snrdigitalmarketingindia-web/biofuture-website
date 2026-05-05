@@ -20,6 +20,15 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const lines = [
+      `Hi, I'd like a quote from BioFuture.`,
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      `Product: ${form.product}`,
+      form.qty   ? `Quantity: ${form.qty}`   : null,
+      form.org   ? `Organisation: ${form.org}` : null,
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/917301222666?text=${encodeURIComponent(lines)}`, '_blank');
     setSubmitted(true);
     setForm({ name:'', phone:'', product:'', qty:'', org:'' });
   };
