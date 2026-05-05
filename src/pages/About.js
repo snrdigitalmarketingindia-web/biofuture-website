@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
@@ -22,6 +22,7 @@ const timeline = [
 const states = ['Hyderabad','Telangana','Andhra Pradesh','Tamil Nadu','Karnataka','Maharashtra','Delhi NCR','+ all states'];
 
 export default function About() {
+  useEffect(() => { document.title = 'About Us | DRDO Certified Biodegradable Bags Manufacturer Hyderabad | RDN Bio Products'; }, []);
   return (
     <main>
       <section className="page-hero">
