@@ -438,6 +438,24 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 
+/* About page grids */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.about-drdo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
 /* Hamburger menu */
 .hamburger {
   display: none;

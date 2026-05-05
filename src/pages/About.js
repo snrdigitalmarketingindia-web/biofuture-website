@@ -37,7 +37,7 @@ export default function About() {
       {/* Stats */}
       <section style={{padding:'48px 0',borderBottom:'1px solid #f0f5e8'}}>
         <div className="container">
-          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16}}>
+          <div className="about-stats">
             {[['6+','Product categories'],['30+','Size variants'],['Pan India','Supply reach'],['DRDO','Certified technology']].map(s=>(
               <div key={s[0]} style={{background:'var(--green-pale)',borderRadius:12,padding:'24px 16px',textAlign:'center',border:'1px solid #d4e8b0'}}>
                 <div style={{fontFamily:'var(--font-display)',fontSize:32,color:'var(--green-dark)',marginBottom:4}}>{s[0]}</div>
@@ -51,7 +51,7 @@ export default function About() {
       {/* DRDO block */}
       <section style={{padding:'56px 0',borderBottom:'1px solid #f0f5e8',background:'var(--green-pale)'}}>
         <div className="container">
-          <div style={{display:'grid',gridTemplateColumns:'1fr auto',gap:40,alignItems:'center'}}>
+          <div className="about-drdo">
             <div>
               <h2 className="section-title">Backed by DRDO-certified technology</h2>
               <p style={{fontSize:15,color:'#555',lineHeight:1.8,marginBottom:16}}>
@@ -73,7 +73,7 @@ export default function About() {
         <div className="container">
           <h2 className="section-title" style={{textAlign:'center'}}>Our values</h2>
           <p className="section-sub" style={{textAlign:'center'}}>What drives every product we make</p>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}}>
+          <div className="about-values">
             {values.map(v=>(
               <div key={v.title} style={{background:'var(--green-pale)',border:'1px solid #d4e8b0',borderRadius:12,padding:'24px 20px',textAlign:'center'}}>
                 <div style={{fontSize:32,marginBottom:12}}>{v.icon}</div>
