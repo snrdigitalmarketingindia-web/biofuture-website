@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
@@ -15,6 +15,7 @@ const products = [
 const customers = ['Kirana stores','Supermarkets','Hospitals & clinics','Restaurants & hotels','Temples','Government & institutions','Individual buyers'];
 
 export default function Home() {
+  useEffect(() => { document.title = 'Biodegradable Bags Hyderabad | Carry Bags, Garbage Bags | RDN Bio Products'; }, []);
   const [form, setForm] = useState({ name:'', phone:'', product:'', qty:'', org:'' });
   const [submitted, setSubmitted] = useState(false);
 

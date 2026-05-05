@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
@@ -57,6 +57,7 @@ function ProductCard({ id, title, subtitle, badge, children, product }) {
 }
 
 export default function Products() {
+  useEffect(() => { document.title = 'Biodegradable Carry Bags, Garbage Bags & Pouches | D-Cut, U-Cut | RDN Bio Products'; }, []);
   const [active, setActive] = useState('all');
   const filters = ['all','d-cut','u-cut','garbage','pouches','butter','granules'];
   const filterLabels = {'all':'All products','d-cut':'D-Cut bags','u-cut':'U/W-Cut bags','garbage':'Garbage bags','pouches':'Pouches','butter':'Butter covers','granules':'Bio granules'};

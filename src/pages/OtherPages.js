@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20custom%20products";
 
 export function Customisation() {
+  useEffect(() => { document.title = 'Custom Biodegradable Bags | Bulk Orders, Custom Size & Color | RDN Bio Products'; }, []);
   return (
     <main>
       <div className="placeholder-page">
@@ -28,6 +29,7 @@ export function Customisation() {
 }
 
 export function Gallery() {
+  useEffect(() => { document.title = 'Gallery | Biodegradable Bags Photos | RDN Bio Products Hyderabad'; }, []);
   return (
     <main>
       <div className="placeholder-page">
@@ -54,6 +56,7 @@ export function Gallery() {
 }
 
 export function Contact() {
+  useEffect(() => { document.title = 'Contact Us | Biodegradable Bags Supplier Hyderabad | RDN Bio Products'; }, []);
   const [form, setForm] = useState({ name:'', phone:'', email:'', subject:'', message:'' });
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
