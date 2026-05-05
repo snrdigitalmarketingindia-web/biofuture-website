@@ -58,7 +58,7 @@ function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <h4>BioFuture</h4>
+            <h4>RDN Bio Products</h4>
             <p>Save the Earth for Tomorrow</p>
             <p style={{marginTop:8}}>RDN Bio Products LLP</p>
             <div className="drdo-badge" style={{marginTop:12}}>✓ DRDO Certified Technology</div>
@@ -78,7 +78,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 BioFuture · RDN Bio Products LLP</span>
+          <span>© 2025 RDN Bio Products LLP</span>
           <span>I am NOT Plastic 🌿</span>
         </div>
       </div>
