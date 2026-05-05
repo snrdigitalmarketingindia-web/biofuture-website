@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
@@ -194,7 +195,7 @@ export default function Products() {
               <div style={{fontSize:13,color:'#666'}}>We manufacture to order — minimum quantities apply.</div>
             </div>
             <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
-              <a href="/customisation" className="btn-primary" style={{fontSize:13,padding:'9px 18px'}}>Request customization</a>
+              <Link to="/customisation" className="btn-primary" style={{fontSize:13,padding:'9px 18px'}}>Request customization</Link>
               <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa" style={{fontSize:13,padding:'9px 18px'}}>WhatsApp for bulk quote</a>
             </div>
           </div>
