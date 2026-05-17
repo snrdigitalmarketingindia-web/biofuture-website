@@ -8,6 +8,7 @@ const ALL_SOLUTIONS = {
   carry:         { icon: '🛒', title: 'Carry Bags (Retail)',         desc: 'D-Cut & U/W-Cut bags, 21 sizes, custom printing',   link: '/biodegradable-carry-bags',   color: '#e8f5e9', border: '#a5d6a7' },
   butter:        { icon: '🧈', title: 'Butter Sheets',               desc: 'Food-grade wrapping for dairy, bakery & sweets',    link: '/butter-sheets-food-wrapping', color: '#fce4ec', border: '#f48fb1' },
   retail:        { icon: '🏪', title: 'Retail & Supermarkets',       desc: 'Branded carry bags for kirana stores, supermarkets & retail chains', link: '/retail-packaging-solutions', color: '#e8f5e9', border: '#a5d6a7' },
+  export:        { icon: '🌏', title: 'Export Packaging',             desc: 'DRDO certified PBAT packaging for Middle East, Southeast Asia & global markets', link: '/export-packaging-solutions', color: '#e0f7e9', border: '#80cba4' },
 };
 
 export default function RelatedSolutions({ exclude }) {

@@ -484,7 +484,9 @@ export function Contact() {
     setForm({ name:'', phone:'', email:'', subject:'', message:'' });
   };
 
-  const WA_CONTACT = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
+  const WA_CONTACT = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20RDN%20Bio%20Products%20biodegradable%20packaging";
+  const WA_EXPORT = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20importing%20biodegradable%20packaging%20from%20India%20%E2%80%94%20RDN%20Bio%20Products";
+  const WA_DIST = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20becoming%20a%20distributor%2Fdealer%20for%20RDN%20Bio%20Products";
 
   return (
     <main>
@@ -587,11 +589,47 @@ export function Contact() {
               <div style={{fontSize:13,color:'#666'}}>Send us a message and we'll reply within the hour — Mon to Sat, 9am to 6pm.</div>
             </div>
             <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
-              <a href="tel:+917301222666" className="btn-call">📞 Call Now</a>
-              <a href={WA_CONTACT} target="_blank" rel="noreferrer" className="btn-wa">
+              <a href="tel:+917301222666" data-cta="contact-call" className="btn-call">📞 Call Now</a>
+              <a href={WA_CONTACT} target="_blank" rel="noreferrer" data-cta="contact-whatsapp" className="btn-wa">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
                 WhatsApp us
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Export Enquiries */}
+      <section style={{padding:'48px 0',background:'#fafff5',borderBottom:'1px solid #f0f5e8'}}>
+        <div className="container">
+          <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:28,alignItems:'start'}}>
+            <div style={{background:'var(--green-dark)',borderRadius:14,padding:'28px 24px',color:'#fff'}}>
+              <div style={{fontSize:11,fontWeight:800,letterSpacing:'0.1em',color:'rgba(255,255,255,0.55)',marginBottom:10,textTransform:'uppercase'}}>🌏 Export Enquiries</div>
+              <div style={{fontFamily:'var(--font-display)',fontSize:20,marginBottom:10,lineHeight:1.3}}>Importing biodegradable packaging from India?</div>
+              <p style={{fontSize:13,color:'rgba(255,255,255,0.8)',lineHeight:1.7,marginBottom:18}}>
+                We export DRDO certified PBAT biodegradable packaging to the Middle East, Southeast Asia, and international markets. Minimum export order 50,000 units. CIF / FOB pricing available.
+              </p>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                <a href={WA_EXPORT} target="_blank" rel="noreferrer" data-cta="contact-export-whatsapp" className="btn-wa" style={{justifyContent:'center'}}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
+                  WhatsApp Export Enquiry
+                </a>
+                <Link to="/export-packaging-solutions" style={{background:'rgba(255,255,255,0.12)',color:'#fff',fontWeight:600,fontSize:13,padding:'10px 18px',borderRadius:20,textDecoration:'none',textAlign:'center',border:'1px solid rgba(255,255,255,0.2)'}}>View Export Page →</Link>
+              </div>
+            </div>
+            <div style={{background:'var(--green-pale)',border:'1px solid #d4e8b0',borderRadius:14,padding:'28px 24px'}}>
+              <div style={{fontSize:11,fontWeight:800,letterSpacing:'0.1em',color:'#777',marginBottom:10,textTransform:'uppercase'}}>🤝 Distributor Enquiries</div>
+              <div style={{fontFamily:'var(--font-display)',fontSize:20,color:'var(--green-dark)',marginBottom:10,lineHeight:1.3}}>Become a biodegradable packaging distributor</div>
+              <p style={{fontSize:13,color:'#666',lineHeight:1.7,marginBottom:18}}>
+                City and state-level distribution opportunities available. 18–28% margins, territory exclusivity, DRDO-certified products. Growing plastic ban market across India.
+              </p>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                <a href={WA_DIST} target="_blank" rel="noreferrer" data-cta="contact-distributor-whatsapp" className="btn-wa" style={{justifyContent:'center'}}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
+                  WhatsApp Distributor Enquiry
+                </a>
+                <Link to="/distributor" style={{background:'var(--green-dark)',color:'#fff',fontWeight:600,fontSize:13,padding:'10px 18px',borderRadius:20,textDecoration:'none',textAlign:'center'}}>View Distributor Program →</Link>
+              </div>
             </div>
           </div>
         </div>
