@@ -17,6 +17,8 @@ import ButterSheets from './pages/ButterSheets';
 import RetailPackaging from './pages/RetailPackaging';
 import NotFound from './pages/NotFound';
 import GetQuote from './pages/GetQuote';
+import Distributor from './pages/Distributor';
+import Sustainability from './pages/Sustainability';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -71,6 +73,7 @@ function Navbar() {
           </li>
           <li><NavLink to="/blog">Blog</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/distributor">Distributors</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -100,6 +103,8 @@ function Navbar() {
         <NavLink to="/gallery" onClick={close}>Gallery</NavLink>
         <NavLink to="/customisation" onClick={close}>Customise</NavLink>
         <NavLink to="/about" onClick={close}>About</NavLink>
+        <NavLink to="/distributor" onClick={close}>🤝 Become a Distributor</NavLink>
+        <NavLink to="/sustainability" onClick={close}>🌍 Sustainability</NavLink>
         <NavLink to="/contact" onClick={close}>Contact</NavLink>
         <NavLink to="/get-quote" onClick={close} style={{ background: '#f57c00', color: '#fff', fontWeight: 700 }}>📩 Get a Bulk Quote</NavLink>
         <a href="tel:+917301222666" onClick={close} style={{ color: '#ffd54f' }}>📞 Call +91-7301222666</a>
@@ -160,6 +165,8 @@ function Footer() {
             <p><a href="#/customisation" style={{ color: 'rgba(255,255,255,0.75)' }}>Customise</a></p>
             <p><a href="#/about" style={{ color: 'rgba(255,255,255,0.75)' }}>About Us</a></p>
             <p><a href="#/products" style={{ color: 'rgba(255,255,255,0.75)' }}>All Products</a></p>
+            <p><a href="#/sustainability" style={{ color: '#a8e06b', fontWeight: 600 }}>🌍 Sustainability</a></p>
+            <p><a href="#/distributor" style={{ color: '#a8e06b', fontWeight: 600 }}>🤝 Become a Distributor</a></p>
           </div>
         </div>
 
@@ -220,6 +227,8 @@ export default function App() {
         <Route path="/butter-sheets-food-wrapping" element={<ButterSheets />} />
         <Route path="/retail-packaging-solutions" element={<RetailPackaging />} />
         <Route path="/get-quote" element={<GetQuote />} />
+        <Route path="/distributor" element={<Distributor />} />
+        <Route path="/sustainability" element={<Sustainability />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
