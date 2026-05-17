@@ -1359,3 +1359,91 @@ details[open] .faq-icon {
 .spec-table tr:nth-child(even) td { background:#fafdf5; }
 @media (max-width:600px) { .spec-table { display:block; overflow-x:auto; } }
 
+/* ══════════════════════════════════════════════
+   PHASE 3: PERFORMANCE & CLS PREVENTION
+══════════════════════════════════════════════ */
+
+/* Prevent layout shift on images — always set dimensions */
+img { max-width:100%; height:auto; }
+
+/* Smooth image loading — prevent CLS */
+.hero-img img, .product-card-img img {
+  aspect-ratio: auto;
+}
+
+/* Offscreen sections — browser hint for deferred rendering */
+section + section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+/* Override content-visibility for above-fold sections */
+section:first-of-type, section:nth-of-type(2) {
+  content-visibility: visible;
+}
+
+/* Navbar logo — prevent CLS from large logo file */
+.logo img {
+  width: 36px !important;
+  height: 36px !important;
+  aspect-ratio: 1;
+}
+
+/* ══════════════════════════════════════════════
+   PHASE 3: TRUST BADGE STYLES
+══════════════════════════════════════════════ */
+.trust-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 18px;
+}
+.trust-card {
+  background: var(--green-pale);
+  border: 1px solid #d4e8b0;
+  border-radius: 16px;
+  padding: 22px 18px;
+  position: relative;
+}
+.trust-card__badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--green-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* ══════════════════════════════════════════════
+   PHASE 3: GET QUOTE PAGE
+══════════════════════════════════════════════ */
+.industry-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+@media (max-width: 768px) {
+  .industry-selector-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.industry-selector-card {
+  border: 2px solid #d4e8b0;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  transition: all 0.15s ease;
+}
+.industry-selector-card:hover {
+  border-color: var(--green-mid);
+  background: var(--green-pale);
+}
+.industry-selector-card.selected {
+  border-color: var(--green-dark);
+  background: var(--green-pale);
+  box-shadow: 0 0 0 3px rgba(59,109,17,0.12);
+}
+

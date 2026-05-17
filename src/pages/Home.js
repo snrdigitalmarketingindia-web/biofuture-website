@@ -161,7 +161,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-img">
-              <img src="hero2.png" alt="RDN Bio Products — Biodegradable packaging solutions India" loading="eager" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16 }} />
+              <img src="hero2.png" alt="RDN Bio Products — Biodegradable packaging solutions India" loading="eager" fetchpriority="high" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16 }} />
             </div>
           </div>
         </div>
@@ -353,6 +353,37 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── MANUFACTURING TRUST ──────────────────────────── */}
+      <section style={{ padding: '56px 0', borderBottom: '1px solid #f0f5e8', background: '#fff' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: 'var(--green-mid)', textTransform: 'uppercase', marginBottom: 10 }}>🏭 Manufacturing Authority</span>
+            <h2 className="section-title" style={{ textAlign: 'center' }}>Why B2B buyers trust RDN Bio Products</h2>
+            <p className="section-sub" style={{ textAlign: 'center' }}>DRDO certified · Hyderabad manufacturer · Pan India wholesale supply</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 20 }}>
+            {[
+              { icon: '🛡️', title: 'DRDO Certified Technology', desc: 'Products certified by India\'s Defence Research & Development Organisation — the most credible government certification for biodegradable materials in India.', badge: 'Govt. of India' },
+              { icon: '🏭', title: 'Dedicated Manufacturing Unit', desc: 'Own manufacturing facility in Karmanghat, Hyderabad. In-house PBAT processing, printing, and quality control — full supply chain control.', badge: 'Hyderabad' },
+              { icon: '📦', title: '30+ Standard Size Variants', desc: 'D-Cut (7), U/W-Cut (14), Garbage (8), Pouches (4), Grocery (8), Butter covers (2). Custom sizes manufactured on request for bulk orders.', badge: '30+ SKUs' },
+              { icon: '🚚', title: 'Pan India Wholesale Supply', desc: 'Supplying kirana stores, hospitals, temples, restaurants, and institutions across all Indian states. Bulk pricing for distributors.', badge: 'All states' },
+              { icon: '🎨', title: 'Custom Branding & Sizes', desc: 'Brand printing with your logo, tagline, and contact. Pantone colour matching. Custom dimensions. MOQ 1,000 units for printed, 500 for custom size.', badge: 'Custom MOQ' },
+              { icon: '🧾', title: 'GST Registered · LLP', desc: 'Registered under MCA as RDN Bio Products LLP (LLPIN: ACI-9987). GST invoices issued. Institutional POs accepted. Transparent business practices.', badge: 'LLPIN ACI-9987' },
+            ].map(c => (
+              <div key={c.title} style={{ background: 'var(--green-pale)', border: '1px solid #d4e8b0', borderRadius: 16, padding: '24px 20px', position: 'relative' }}>
+                <div style={{ position: 'absolute', top: 16, right: 16, background: 'var(--green-dark)', color: '#fff', fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 12 }}>{c.badge}</div>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{c.icon}</div>
+                <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--green-dark)', marginBottom: 8 }}>{c.title}</div>
+                <div style={{ fontSize: 13, color: '#666', lineHeight: 1.65 }}>{c.desc}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 32 }}>
+            <Link to="/about" className="btn-outline" style={{ fontSize: 13 }}>About our manufacturing &amp; certifications →</Link>
           </div>
         </div>
       </section>
