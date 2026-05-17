@@ -103,7 +103,7 @@ export default function CarryBags() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
       {/* Hero */}
-      <section className="page-hero">
+      <section className="page-hero page-hero--dark">
         <div className="container">
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 14 }}>
             <span className="drdo-badge">✓ DRDO Certified Technology</span>

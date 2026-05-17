@@ -107,7 +107,7 @@ export default function FoodPackaging() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero */}
-      <section className="page-hero">
+      <section className="page-hero page-hero--dark">
         <div className="container">
           <div style={{ fontSize: 48, marginBottom: 12 }}>🍽️</div>
           <h1 style={{ fontSize: 'clamp(1.6rem,4vw,2.6rem)', fontWeight: 800, lineHeight: 1.25, marginBottom: 16, color: '#fff' }}>
