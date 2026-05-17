@@ -266,7 +266,7 @@ const galleryItems = [
     name: 'D-Cut Bags',
     label: 'Carry Bags',
     desc: '7 size variants · Retail & kirana stores',
-    photo: 'dcut-bag.png',
+    photo: 'dcut-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <rect x="16" y="36" width="88" height="96" rx="8" fill="white" opacity="0.93"/>
@@ -281,7 +281,7 @@ const galleryItems = [
     name: 'Garbage Bags',
     label: 'Waste Management',
     desc: '8 size variants · Offices & restaurants',
-    photo: 'garbage-bag.png',
+    photo: 'garbage-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <path d="M60 6 C51 6 48 17 45 23 L35 30 Q60 40 85 30 L75 23 C72 17 69 6 60 6Z" fill="white" opacity="0.88"/>
@@ -295,7 +295,7 @@ const galleryItems = [
     name: 'U/W-Cut Bags',
     label: 'Grocery Bags',
     desc: '14 size variants · Hospitals & grocery',
-    photo: 'ucut-bag.png',
+    photo: 'ucut-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <rect x="16" y="44" width="88" height="88" rx="8" fill="white" opacity="0.93"/>
@@ -310,7 +310,7 @@ const galleryItems = [
     name: 'Pouches',
     label: 'Grocery Bags',
     desc: 'Multiple sizes · Packaging & food',
-    photo: 'pouches-bag.png',
+    photo: 'pouches-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <rect x="34" y="28" width="78" height="84" rx="8" fill="white" opacity="0.55"/>
@@ -325,7 +325,7 @@ const galleryItems = [
     name: 'Butter Covers',
     label: 'Dairy & Food',
     desc: '2 sizes · Dairy & food industry',
-    photo: 'butter-bag.png',
+    photo: 'butter-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <rect x="10" y="104" width="100" height="13" rx="4" fill="white" opacity="0.44"/>
@@ -343,7 +343,7 @@ const galleryItems = [
     name: 'Bio Compound Granules',
     label: 'Fillers & PBAT',
     desc: 'PBAT fillers · For manufacturers',
-    photo: 'granules.png',
+    photo: 'granules.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <text x="60" y="22" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Arial,sans-serif">Fillers &amp; PBAT</text>
@@ -369,7 +369,7 @@ const galleryItems = [
     name: 'Grocery Bags',
     label: 'Carry Bags',
     desc: '8 size variants · Supermarkets & wet markets',
-    photo: 'pouches2-bag.png',
+    photo: 'pouches2-bag.webp',
     svg: (
       <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'100%'}}>
         <rect x="22" y="28" width="78" height="84" rx="8" fill="white" opacity="0.55"/>

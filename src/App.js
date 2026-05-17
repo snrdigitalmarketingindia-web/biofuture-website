@@ -39,7 +39,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="container navbar-inner">
         <a href="#/" className="logo" onClick={close}>
-          <img src="rdn-logo.png" alt="RDN Bio Products" loading="eager" decoding="async" width="36" height="36" style={{ width: 36, height: 36, objectFit: 'contain', borderRadius: 6 }} />
+          <img src="rdn-logo.webp" alt="RDN Bio Products" loading="eager" decoding="async" width="36" height="36" style={{ width: 36, height: 36, objectFit: 'contain', borderRadius: 6 }} />
           RDN Bio Products
         </a>
         <ul className="nav-links">

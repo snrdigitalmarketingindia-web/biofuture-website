@@ -17,12 +17,12 @@ const productListSchema = {
   description: 'DRDO certified 100% biodegradable bags manufactured in Hyderabad, India. BPA-free PBAT organic material.',
   url: 'https://rdnbio.com/#/products',
   itemListElement: [
-    { '@type':'ListItem', position:1, item:{ '@type':'Product', name:'D-Cut Biodegradable Carry Bags', description:'D-Cut shape biodegradable carry bags. 7 sizes (8×12 to 16×24 inch), 35–45 microns. Ideal for retail shops, kirana stores, supermarkets. DRDO certified, BPA-free, PBAT material.', image:'https://rdnbio.com/dcut-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP',url:'https://rdnbio.com'}, material:'PBAT — Polybutylene Adipate Terephthalate', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
-    { '@type':'ListItem', position:2, item:{ '@type':'Product', name:'U/W-Cut Biodegradable Carry Bags', description:'U/W-Cut biodegradable carry bags. 14 sizes (8×10 to 27×30 inch), 30–50 microns, load 0.5–10 kg. Ideal for grocery, hospitals, supermarkets.', image:'https://rdnbio.com/ucut-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
-    { '@type':'ListItem', position:3, item:{ '@type':'Product', name:'Biodegradable Garbage Bags', description:'Heavy-duty biodegradable garbage bags. 8 sizes (17×19 to 35×45 inch), load 1–18 kg. Ideal for hospitals, restaurants, offices, municipalities.', image:'https://rdnbio.com/garbage-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
-    { '@type':'ListItem', position:4, item:{ '@type':'Product', name:'Biodegradable Pouches and Grocery Bags', description:'Biodegradable pouches (4×6 to 8×11 inch) and grocery bags (5×8 to 16×24 inch). 12 size variants for food packaging, spices, grocery retail.', image:'https://rdnbio.com/pouches-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
-    { '@type':'ListItem', position:5, item:{ '@type':'Product', name:'Biodegradable Butter Covers', description:'Food-safe biodegradable butter covers for dairy industry. 2 sizes (9×9 and 12×12 inch), 30 microns. BPA-free.', image:'https://rdnbio.com/butter-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
-    { '@type':'ListItem', position:6, item:{ '@type':'Product', name:'Bio Compound Granules PBAT', description:'PBAT-based bio compound granules and fillers for manufacturers. Raw material for producing biodegradable bags. Bulk quantities available.', image:'https://rdnbio.com/granules.png', manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:1, item:{ '@type':'Product', name:'D-Cut Biodegradable Carry Bags', description:'D-Cut shape biodegradable carry bags. 7 sizes (8×12 to 16×24 inch), 35–45 microns. Ideal for retail shops, kirana stores, supermarkets. DRDO certified, BPA-free, PBAT material.', image:'https://rdnbio.com/dcut-bag.webp', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP',url:'https://rdnbio.com'}, material:'PBAT — Polybutylene Adipate Terephthalate', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:2, item:{ '@type':'Product', name:'U/W-Cut Biodegradable Carry Bags', description:'U/W-Cut biodegradable carry bags. 14 sizes (8×10 to 27×30 inch), 30–50 microns, load 0.5–10 kg. Ideal for grocery, hospitals, supermarkets.', image:'https://rdnbio.com/ucut-bag.webp', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:3, item:{ '@type':'Product', name:'Biodegradable Garbage Bags', description:'Heavy-duty biodegradable garbage bags. 8 sizes (17×19 to 35×45 inch), load 1–18 kg. Ideal for hospitals, restaurants, offices, municipalities.', image:'https://rdnbio.com/garbage-bag.webp', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:4, item:{ '@type':'Product', name:'Biodegradable Pouches and Grocery Bags', description:'Biodegradable pouches (4×6 to 8×11 inch) and grocery bags (5×8 to 16×24 inch). 12 size variants for food packaging, spices, grocery retail.', image:'https://rdnbio.com/pouches-bag.webp', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:5, item:{ '@type':'Product', name:'Biodegradable Butter Covers', description:'Food-safe biodegradable butter covers for dairy industry. 2 sizes (9×9 and 12×12 inch), 30 microns. BPA-free.', image:'https://rdnbio.com/butter-bag.webp', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:6, item:{ '@type':'Product', name:'Bio Compound Granules PBAT', description:'PBAT-based bio compound granules and fillers for manufacturers. Raw material for producing biodegradable bags. Bulk quantities available.', image:'https://rdnbio.com/granules.webp', manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
   ],
 };
 
@@ -164,7 +164,7 @@ export default function Products() {
         <div className="container">
 
           {show('d-cut') && (
-            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" photo="dcut-bag.png" industryLink={{to:'/biodegradable-carry-bags',label:'🛒 Full carry bag guide for retail & kirana'}}>
+            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" photo="dcut-bag.webp" industryLink={{to:'/biodegradable-carry-bags',label:'🛒 Full carry bag guide for retail & kirana'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>
@@ -177,7 +177,7 @@ export default function Products() {
           )}
 
           {show('u-cut') && (
-            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" photo="ucut-bag.png" industryLink={{to:'/institutional-packaging',label:'🏥 Bulk institutional supply guide'}}>
+            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" photo="ucut-bag.webp" industryLink={{to:'/institutional-packaging',label:'🏥 Bulk institutional supply guide'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -193,7 +193,7 @@ export default function Products() {
           )}
 
           {show('garbage') && (
-            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" photo="garbage-bag.png" industryLink={{to:'/institutional-packaging',label:'🏥 Institutional bulk packaging solutions'}}>
+            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" photo="garbage-bag.webp" industryLink={{to:'/institutional-packaging',label:'🏥 Institutional bulk packaging solutions'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -212,8 +212,8 @@ export default function Products() {
               <div className="card-body">
                 <div className="product-card-inner">
                   <div className="product-card-img" style={{display:'flex',flexDirection:'column',gap:8}}>
-                    <img src="pouches-bag.png" alt="Pouches" style={{width:'100%',height:'50%',objectFit:'contain'}} />
-                    <img src="pouches2-bag.png" alt="Grocery bags" style={{width:'100%',height:'50%',objectFit:'contain'}} />
+                    <img src="pouches-bag.webp" alt="Pouches" style={{width:'100%',height:'50%',objectFit:'contain'}} />
+                    <img src="pouches2-bag.webp" alt="Grocery bags" style={{width:'100%',height:'50%',objectFit:'contain'}} />
                   </div>
                   <div className="product-card-content">
                     <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16}}>
@@ -255,7 +255,7 @@ export default function Products() {
           )}
 
           {show('butter') && (
-            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" photo="butter-bag.png" industryLink={{to:'/butter-sheets-food-wrapping',label:'🧈 Full butter sheets & wrapping guide'}}>
+            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" photo="butter-bag.webp" industryLink={{to:'/butter-sheets-food-wrapping',label:'🧈 Full butter sheets & wrapping guide'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>
@@ -273,7 +273,7 @@ export default function Products() {
               <div className="card-body">
                 <div className="product-card-inner">
                   <div className="product-card-img">
-                    <img src="granules.png" alt="Bio compound granules" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                    <img src="granules.webp" alt="Bio compound granules" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
                   </div>
                   <div className="product-card-content">
                     <p style={{fontSize:14,color:'#555',lineHeight:1.7,marginBottom:16}}>

@@ -116,7 +116,7 @@ export default function About() {
               </p>
             </div>
             <div style={{width:160,height:160,flexShrink:0}}>
-              <img src="drdo-logo.png" alt="DRDO — Defence Research and Development Organisation" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+              <img src="drdo-logo.webp" alt="DRDO — Defence Research and Development Organisation" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
             </div>
           </div>
         </div>

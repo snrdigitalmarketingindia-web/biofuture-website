@@ -68,12 +68,12 @@ const industries = [
 ];
 
 const productRange = [
-  { name: 'D-Cut Bags',    desc: '7 sizes · 35–45 microns',  use: 'Retail & kirana',          photo: 'dcut-bag.png',    badge: '7 sizes'  },
-  { name: 'U/W-Cut Bags',  desc: '14 sizes · 30–50 microns', use: 'Grocery & hospitals',      photo: 'ucut-bag.png',    badge: '14 sizes' },
-  { name: 'Garbage Bags',  desc: '8 sizes · up to 18 kg',    use: 'Offices & institutions',   photo: 'garbage-bag.png', badge: '8 sizes'  },
-  { name: 'Pouches',       desc: '4 sizes · 35–40 microns',  use: 'Food & spices',            photo: 'pouches-bag.png', badge: '4 sizes'  },
-  { name: 'Grocery Bags',  desc: '8 sizes · 30–45 microns',  use: 'Supermarkets',             photo: 'pouches2-bag.png',badge: '8 sizes'  },
-  { name: 'Butter Covers', desc: '2 sizes · 30 microns',     use: 'Dairy & food industry',   photo: 'butter-bag.png',  badge: '2 sizes'  },
+  { name: 'D-Cut Bags',    desc: '7 sizes · 35–45 microns',  use: 'Retail & kirana',          photo: 'dcut-bag.webp',    badge: '7 sizes'  },
+  { name: 'U/W-Cut Bags',  desc: '14 sizes · 30–50 microns', use: 'Grocery & hospitals',      photo: 'ucut-bag.webp',    badge: '14 sizes' },
+  { name: 'Garbage Bags',  desc: '8 sizes · up to 18 kg',    use: 'Offices & institutions',   photo: 'garbage-bag.webp', badge: '8 sizes'  },
+  { name: 'Pouches',       desc: '4 sizes · 35–40 microns',  use: 'Food & spices',            photo: 'pouches-bag.webp', badge: '4 sizes'  },
+  { name: 'Grocery Bags',  desc: '8 sizes · 30–45 microns',  use: 'Supermarkets',             photo: 'pouches2-bag.webp',badge: '8 sizes'  },
+  { name: 'Butter Covers', desc: '2 sizes · 30 microns',     use: 'Dairy & food industry',   photo: 'butter-bag.webp',  badge: '2 sizes'  },
 ];
 
 const impactStats = [
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-img">
-              <img src="hero2.png" alt="RDN Bio Products — Biodegradable packaging solutions India" loading="eager" fetchpriority="high" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16 }} />
+              <img src="hero2.webp" alt="RDN Bio Products — Biodegradable packaging solutions India" loading="eager" fetchpriority="high" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 16 }} />
             </div>
           </div>
         </div>
