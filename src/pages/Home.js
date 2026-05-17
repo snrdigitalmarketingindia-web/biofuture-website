@@ -86,8 +86,6 @@ const impactStats = [
 const testimonials = [
   { quote: 'We switched from plastic carry bags 8 months ago. Customers love that we use biodegradable bags — it actually brings more people to our store. Quality is excellent and delivery is always on time.', name: 'Ravi Kumar', role: 'Owner, Sri Lakshmi Kirana Store', location: 'Dilsukhnagar, Hyderabad', icon: '🏪' },
   { quote: 'Our hospital switched to RDN Bio Products for all waste disposal and patient-facing bags. BPA-free certification was the deciding factor. Responsive team, good bulk pricing.', name: 'Dr. Prasad Reddy', role: 'Administrator, Care Polyclinic', location: 'Kukatpally, Hyderabad', icon: '🏥' },
-  { quote: 'We order garbage bags and carry bags in bulk every month. Price is fair, bags are strong, and they decompose as promised. WhatsApp ordering makes it very convenient for us.', name: 'Suresh Babu', role: 'Catering Manager, Grand Residency Hotel', location: 'Begumpet, Hyderabad', icon: '🍽️' },
-  { quote: 'The temple trusts use thousands of bags during festivals. RDN Bio Products gives us eco-friendly options that align with our values. Custom printing with our temple name is a great touch.', name: 'Venkatesh Sharma', role: 'Trust Secretary, Sri Venkateswara Temple', location: 'Secunderabad', icon: '🛕' },
 ];
 
 const faqs = [
@@ -95,8 +93,6 @@ const faqs = [
   { q: 'Are RDN Bio Products DRDO certified?', a: 'Yes. Our bags are manufactured using technology certified by the Defence Research and Development Organisation (DRDO), Government of India — validating biodegradability, non-toxicity, and material safety.' },
   { q: 'Do you supply biodegradable bags across India?', a: 'Yes. We supply pan India from our manufacturing unit in Hyderabad, Telangana — covering all states including Andhra Pradesh, Tamil Nadu, Karnataka, Maharashtra, Delhi NCR, and more.' },
   { q: 'What is the minimum order quantity?', a: 'For standard sizes, orders start from single bundles. For custom sizes or printed bags, minimums apply. Contact us on WhatsApp at +91-7301222666 for specific MOQ details.' },
-  { q: 'Can I get custom printed or custom size biodegradable bags?', a: 'Yes. We offer full customisation — custom sizes, custom colors (white, green, black, blue, red, yellow and more), and brand printing with your logo and tagline for bulk orders.' },
-  { q: 'How long do biodegradable bags take to decompose?', a: 'Our biodegradable bags decompose naturally within 180 days under composting conditions — significantly faster than conventional plastic bags which take 400–1,000 years.' },
 ];
 
 export default function Home() {
@@ -267,55 +263,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── GEO EDUCATIONAL BLOCK ────────────────────────── */}
-      <section style={{ padding: '60px 0', borderBottom: '1px solid #eef5e4', background: '#fff' }}>
-        <div className="container">
-          <div className="geo-block">
-            <div>
-              <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--green-mid)', textTransform: 'uppercase', marginBottom: 10 }}>Why it matters</span>
-              <h2 className="section-title" style={{ marginBottom: 16 }}>What is biodegradable packaging — and why are Indian businesses switching?</h2>
-              <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 14 }}>
-                <strong>Biodegradable packaging</strong> is manufactured from PBAT (Polybutylene Adipate Terephthalate) — a plant-based polymer that breaks down naturally in soil within approximately 180 days under composting conditions, leaving no toxic residue.
-              </p>
-              <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 14 }}>
-                India's <strong>Plastic Waste Management Rules</strong> mandate a shift to compliant alternatives — making DRDO-certified biodegradable bags the preferred choice for businesses, institutions, temples, and government bodies across the country.
-              </p>
-              <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 14 }}>
-                RDN Bio Products (LLPIN: ACI-9987) has been manufacturing certified biodegradable bags in <strong>Hyderabad, Telangana</strong> since August 2024, supplying kirana stores, hospitals, restaurants, temples, and institutions pan India.
-              </p>
-              <p style={{ fontSize: 13, color: '#777', lineHeight: 1.8, marginBottom: 24, padding: '12px 16px', background: '#f8fcf2', borderLeft: '3px solid var(--green-mid)', borderRadius: '0 8px 8px 0' }}>
-                <strong>RDN Bio Products LLP</strong> (LLPIN: ACI-9987) is a biodegradable packaging manufacturer incorporated in August 2024 in Hyderabad, Telangana, India. The company manufactures D-Cut carry bags, U/W-Cut carry bags, garbage bags, food pouches, grocery bags, butter covers, and PBAT bio compound granules using DRDO-certified technology. Products are BPA-free, 100% organic, and compliant with India's Plastic Waste Management Rules. RDN Bio Products supplies retail stores, supermarkets, hospitals, restaurants, temples, and government institutions across India, with custom size and brand printing available for bulk orders.
-              </p>
-              <Link to="/about" className="btn-outline" style={{ fontSize: 13 }}>Our technology &amp; certifications →</Link>
-            </div>
-            <div>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', color: 'var(--green-mid)', textTransform: 'uppercase', marginBottom: 16 }}>Biodegradable vs plastic — key facts</div>
-              {[
-                { icon: '🌱', title: 'PBAT plant-based polymer', desc: 'No petroleum inputs. Renewable biological source. Fully organic material meeting all food-contact safety standards.' },
-                { icon: '♻️', title: 'Decomposes in ~180 days', desc: 'Under composting conditions — versus 400 to 1,000 years for conventional plastic carry bags.' },
-                { icon: '🛡️', title: 'BPA-free and non-toxic', desc: 'Safe for food packaging, medical waste, dairy products, and everyday retail use.' },
-                { icon: '⚖️', title: 'Government compliant', desc: 'Meets India\'s Plastic Waste Management Rules. Avoid fines and regulatory action.' },
-                { icon: '🏭', title: 'DRDO certified manufacturing', desc: 'Technology certified by India\'s Defence R&D Organisation — one of the strictest quality standards in the country.' },
-                { icon: '🎨', title: 'Fully customizable', desc: 'Custom size, 7+ color options, and brand printing for bulk orders from kirana stores to institutions.' },
-              ].map((b, i) => (
-                <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 10, alignItems: 'flex-start', background: '#f8fcf2', borderRadius: 10, padding: '10px 13px', border: '1px solid #e8f0dc' }}>
-                  <span style={{ fontSize: 18, flexShrink: 0, marginTop: 1 }}>{b.icon}</span>
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: 13, color: 'var(--green-dark)', marginBottom: 2 }}>{b.title}</div>
-                    <div style={{ fontSize: 12, color: '#777', lineHeight: 1.5 }}>{b.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── FAQ ──────────────────────────────────────────── */}
       <section style={{ padding: '56px 0', borderBottom: '1px solid #f0f5e8', background: '#fafff5' }}>
         <div className="container" style={{ maxWidth: 780 }}>
           <h2 className="section-title">Frequently asked questions</h2>
-          <p className="section-sub">Everything you need to know about biodegradable packaging</p>
+          <p className="section-sub">Common questions answered — more in our FAQ page</p>
           <div style={{ marginTop: 28 }}>
             {faqs.map((faq, i) => (
               <details key={i} className="faq-item">
@@ -353,37 +305,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── MANUFACTURING TRUST ──────────────────────────── */}
-      <section style={{ padding: '56px 0', borderBottom: '1px solid #f0f5e8', background: '#fff' }}>
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
-            <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: 'var(--green-mid)', textTransform: 'uppercase', marginBottom: 10 }}>🏭 Manufacturing Authority</span>
-            <h2 className="section-title" style={{ textAlign: 'center' }}>Why B2B buyers trust RDN Bio Products</h2>
-            <p className="section-sub" style={{ textAlign: 'center' }}>DRDO certified · Hyderabad manufacturer · Pan India wholesale supply</p>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 20 }}>
-            {[
-              { icon: '🛡️', title: 'DRDO Certified Technology', desc: 'Products certified by India\'s Defence Research & Development Organisation — the most credible government certification for biodegradable materials in India.', badge: 'Govt. of India' },
-              { icon: '🏭', title: 'Dedicated Manufacturing Unit', desc: 'Own manufacturing facility in Karmanghat, Hyderabad. In-house PBAT processing, printing, and quality control — full supply chain control.', badge: 'Hyderabad' },
-              { icon: '📦', title: '30+ Standard Size Variants', desc: 'D-Cut (7), U/W-Cut (14), Garbage (8), Pouches (4), Grocery (8), Butter covers (2). Custom sizes manufactured on request for bulk orders.', badge: '30+ SKUs' },
-              { icon: '🚚', title: 'Pan India Wholesale Supply', desc: 'Supplying kirana stores, hospitals, temples, restaurants, and institutions across all Indian states. Bulk pricing for distributors.', badge: 'All states' },
-              { icon: '🎨', title: 'Custom Branding & Sizes', desc: 'Brand printing with your logo, tagline, and contact. Pantone colour matching. Custom dimensions. MOQ 1,000 units for printed, 500 for custom size.', badge: 'Custom MOQ' },
-              { icon: '🧾', title: 'GST Registered · LLP', desc: 'Registered under MCA as RDN Bio Products LLP (LLPIN: ACI-9987). GST invoices issued. Institutional POs accepted. Transparent business practices.', badge: 'LLPIN ACI-9987' },
-            ].map(c => (
-              <div key={c.title} style={{ background: 'var(--green-pale)', border: '1px solid #d4e8b0', borderRadius: 16, padding: '24px 20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', top: 16, right: 16, background: 'var(--green-dark)', color: '#fff', fontSize: 10, fontWeight: 700, padding: '3px 10px', borderRadius: 12 }}>{c.badge}</div>
-                <div style={{ fontSize: 32, marginBottom: 12 }}>{c.icon}</div>
-                <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--green-dark)', marginBottom: 8 }}>{c.title}</div>
-                <div style={{ fontSize: 13, color: '#666', lineHeight: 1.65 }}>{c.desc}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ textAlign: 'center', marginTop: 32 }}>
-            <Link to="/about" className="btn-outline" style={{ fontSize: 13 }}>About our manufacturing &amp; certifications →</Link>
           </div>
         </div>
       </section>
