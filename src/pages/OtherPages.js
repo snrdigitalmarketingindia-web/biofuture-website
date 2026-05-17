@@ -244,8 +244,8 @@ export function Customisation() {
               <div style={{background:'#5cb81c',borderRadius:14,padding:'20px 24px',color:'#fff'}}>
                 <div style={{fontWeight:700,fontSize:15,marginBottom:4}}>Prefer to talk directly?</div>
                 <div style={{fontSize:13,opacity:0.88,marginBottom:14}}>Our team is available Mon–Sat, 9am to 6pm.</div>
-                <div style={{fontSize:14,fontWeight:600,marginBottom:4}}>📞 +91-7301222666</div>
-                <div style={{fontSize:14,fontWeight:600,marginBottom:14}}>📞 +91-7301777444</div>
+                <a href="tel:+917301222666" className="btn-call" style={{marginBottom:6,width:'100%',justifyContent:'center',display:'flex'}}>📞 Call +91-7301222666</a>
+                <a href="tel:+917301777444" className="btn-call btn-call--secondary" style={{marginBottom:14,width:'100%',justifyContent:'center',display:'flex'}}>📞 Call +91-7301777444</a>
                 <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa" style={{background:'#fff',color:'#2a560d',fontSize:13}}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="#2a560d"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
                   WhatsApp us now
@@ -507,9 +507,11 @@ export function Contact() {
               <div className="card" style={{marginBottom:20}}>
                 <div className="card-header"><h3>Contact details</h3></div>
                 <div className="card-body">
+                  <div style={{marginBottom:16}}>
+                    <a href="tel:+917301222666" className="btn-call" style={{width:'100%',justifyContent:'center',display:'flex',marginBottom:8}}>📞 Call +91-7301222666</a>
+                    <a href="tel:+917301777444" className="btn-call btn-call--secondary" style={{width:'100%',justifyContent:'center',display:'flex'}}>📞 Call +91-7301777444</a>
+                  </div>
                   {[
-                    {icon:'📞',label:'Phone',val:'+91-7301222666'},
-                    {icon:'📞',label:'Phone',val:'+91-7301777444'},
                     {icon:'✉',label:'Email',val:'rdnbioproductsllp@gmail.com'},
                     {icon:'📍',label:'Address',val:'#10-01-78/47/5, Srinivasa Nagar Colony, Lingojiguda, Karmanghat, Saroornagar(M), Hyderabad, R.R.Dist., Telangana – 500 035'},
                   ].map((c,i)=>(
@@ -584,12 +586,12 @@ export function Contact() {
               <div style={{fontWeight:600,fontSize:17,color:'var(--green-dark)',marginBottom:4}}>Prefer WhatsApp? So do we.</div>
               <div style={{fontSize:13,color:'#666'}}>Send us a message and we'll reply within the hour — Mon to Sat, 9am to 6pm.</div>
             </div>
-            <div>
+            <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
+              <a href="tel:+917301222666" className="btn-call">📞 Call Now</a>
               <a href={WA_CONTACT} target="_blank" rel="noreferrer" className="btn-wa">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
-                Chat on WhatsApp — +91-7301222666
+                WhatsApp us
               </a>
-              <p style={{fontSize:11,color:'#aaa',marginTop:6}}>Pre-filled message: "Hi, I'm interested in RDN Bio Products"</p>
             </div>
           </div>
         </div>
