@@ -79,6 +79,19 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://rdnbio.com/#/blog/temple-plastic-free-packaging-guide</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/blog/restaurant-plastic-ban-compliance-india</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Industry landing pages -->
   <url>
     <loc>https://rdnbio.com/#/temple-packaging-solutions</loc>
