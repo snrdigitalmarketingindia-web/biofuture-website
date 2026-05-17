@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import RelatedSolutions from '../components/RelatedSolutions';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20food%20packaging";
 const TEL = "tel:+917301222666";
@@ -216,6 +217,8 @@ export default function FoodPackaging() {
       </section>
 
       {/* CTA Form */}
+      <RelatedSolutions exclude="food" />
+
       <section id="food-enquiry" style={{ padding: '56px 0', background: 'var(--green-pale)' }}>
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center' }}>Get your Food Packaging Quote</h2>

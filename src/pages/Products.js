@@ -39,7 +39,7 @@ function waLink(product) {
   return `https://wa.me/917301222666?text=${encodeURIComponent(`Hi, I'd like to enquire about ${product}.`)}`;
 }
 
-function ProductCard({ id, title, subtitle, badge, photo, children }) {
+function ProductCard({ id, title, subtitle, badge, photo, industryLink, children }) {
   return (
     <div id={id} className="card" style={{marginBottom:24}}>
       <div className="card-header">
@@ -58,9 +58,16 @@ function ProductCard({ id, title, subtitle, badge, photo, children }) {
           )}
           <div className="product-card-content">
             {children}
-            <a href={waLink(title)} target="_blank" rel="noreferrer" className="btn-wa" style={{marginTop:16,fontSize:13,padding:'9px 18px',display:'inline-flex',alignItems:'center',gap:7}}>
-              {WA_ICON} Quick enquiry on WhatsApp
-            </a>
+            <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center',marginTop:16}}>
+              <a href={waLink(title)} target="_blank" rel="noreferrer" className="btn-wa" style={{fontSize:13,padding:'9px 18px',display:'inline-flex',alignItems:'center',gap:7}}>
+                {WA_ICON} Quick enquiry on WhatsApp
+              </a>
+              {industryLink && (
+                <Link to={industryLink.to} style={{fontSize:13,fontWeight:600,color:'var(--green-mid)',textDecoration:'none'}}>
+                  {industryLink.label} →
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -157,7 +164,7 @@ export default function Products() {
         <div className="container">
 
           {show('d-cut') && (
-            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" photo="dcut-bag.png">
+            <ProductCard id="d-cut" title="D-Cut shape carry bags" subtitle="Ideal for retail shops, kirana stores, supermarkets" badge="7 sizes" photo="dcut-bag.png" industryLink={{to:'/biodegradable-carry-bags',label:'🛒 Full carry bag guide for retail & kirana'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>
@@ -170,7 +177,7 @@ export default function Products() {
           )}
 
           {show('u-cut') && (
-            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" photo="ucut-bag.png">
+            <ProductCard id="u-cut" title="U/W-Cut shape carry bags" subtitle="Grocery, retail, hospitals — widest size range" badge="14 sizes" photo="ucut-bag.png" industryLink={{to:'/institutional-packaging',label:'🏥 Bulk institutional supply guide'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -186,7 +193,7 @@ export default function Products() {
           )}
 
           {show('garbage') && (
-            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" photo="garbage-bag.png">
+            <ProductCard id="garbage" title="Garbage bags" subtitle="Hospitals, restaurants, offices, municipal use" badge="8 sizes" photo="garbage-bag.png" industryLink={{to:'/institutional-packaging',label:'🏥 Institutional bulk packaging solutions'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th><th>Load capacity</th></tr></thead>
                 <tbody>
@@ -234,9 +241,13 @@ export default function Products() {
                         </table>
                       </div>
                     </div>
-                    <a href={waLink('Pouches / Grocery bags')} target="_blank" rel="noreferrer" className="btn-wa" style={{fontSize:13,padding:'9px 18px',display:'inline-flex',alignItems:'center',gap:7}}>
-                      {WA_ICON} Quick enquiry on WhatsApp
-                    </a>
+                    <div style={{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center',marginTop:4}}>
+                      <a href={waLink('Pouches / Grocery bags')} target="_blank" rel="noreferrer" className="btn-wa" style={{fontSize:13,padding:'9px 18px',display:'inline-flex',alignItems:'center',gap:7}}>
+                        {WA_ICON} Quick enquiry on WhatsApp
+                      </a>
+                      <Link to="/food-packaging-solutions" style={{fontSize:13,fontWeight:600,color:'var(--green-mid)',textDecoration:'none'}}>🍽️ Food packaging solutions →</Link>
+                      <Link to="/temple-packaging-solutions" style={{fontSize:13,fontWeight:600,color:'#e65100',textDecoration:'none'}}>🛕 Temple prasadam packaging →</Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -244,7 +255,7 @@ export default function Products() {
           )}
 
           {show('butter') && (
-            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" photo="butter-bag.png">
+            <ProductCard id="butter" title="Butter covers" subtitle="Dairy & food industry" badge="2 sizes" photo="butter-bag.png" industryLink={{to:'/butter-sheets-food-wrapping',label:'🧈 Full butter sheets & wrapping guide'}}>
               <table className="spec-table">
                 <thead><tr><th>Size (inch)</th><th>Microns</th><th>Pcs per bundle</th></tr></thead>
                 <tbody>

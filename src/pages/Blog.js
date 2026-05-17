@@ -12,6 +12,7 @@ const posts = [
     category: 'Product Guide',
     readTime: '4 min read',
     excerpt: 'D-Cut and U-Cut are the two most popular biodegradable carry bag shapes in India. This guide explains the differences and helps you choose the right type for your business.',
+    relatedPage: { to: '/biodegradable-carry-bags', label: '🛒 View full D-Cut & U-Cut carry bag specs & sizes' },
     sections: [
       { type: 'para', text: 'If you run a retail shop, grocery store, hospital, or restaurant in India, choosing the right carry bag type matters — both for your customers\' convenience and your costs. D-Cut and U-Cut (also called W-Cut) are the two most common biodegradable carry bag formats. Here\'s what you need to know.' },
       { type: 'h2', text: 'What is a D-Cut Bag?' },
@@ -72,6 +73,7 @@ const posts = [
     category: 'Compliance',
     readTime: '5 min read',
     excerpt: "India banned single-use plastics from July 1, 2022. Here's what changed, what's affected, and how your business can stay compliant with DRDO-certified biodegradable bags.",
+    relatedPage: { to: '/products', label: '🌿 Browse compliant biodegradable packaging products' },
     sections: [
       { type: 'para', text: 'On July 1, 2022, the Government of India implemented one of the most significant environmental regulations in recent years — a comprehensive ban on specific single-use plastic items under the Plastic Waste Management Amendment Rules, 2021. If you run a business in India, understanding what is banned, what is not, and how to stay compliant is essential.' },
       { type: 'h2', text: 'What Was Banned from July 1, 2022?' },
@@ -143,6 +145,7 @@ const posts = [
     dateDisplay: 'April 1, 2025',
     category: 'Education',
     readTime: '5 min read',
+    relatedPage: { to: '/about', label: '🏭 About our DRDO certified PBAT manufacturing process' },
     excerpt: 'PBAT (Polybutylene Adipate Terephthalate) is the plant-based polymer used in biodegradable bags. This article explains what it is, how it decomposes, and why it is safe.',
     sections: [
       { type: 'para', text: "If you've been searching for biodegradable bags in India, you've likely seen the term PBAT. But what exactly is it? How does it biodegrade? Is it truly safe? This article explains the science behind biodegradable bags in plain language." },
@@ -210,6 +213,7 @@ const posts = [
     dateDisplay: 'March 15, 2025',
     category: 'Industry Guide',
     readTime: '4 min read',
+    relatedPage: { to: '/institutional-packaging', label: '🏥 Institutional packaging solutions for hospitals & schools' },
     excerpt: 'Hospitals need BPA-free, non-toxic bags for waste disposal, pharmacy counters, and patient-facing use. This guide covers everything healthcare facilities need to know.',
     sections: [
       { type: 'para', text: 'Hospitals and healthcare facilities have some of the most specific requirements for bags and packaging — from bio-medical waste disposal to patient-facing carry bags and pharmacy pouches. Here\'s a complete guide to choosing biodegradable bags for hospital use in India.' },
@@ -266,6 +270,7 @@ const posts = [
     date: '2025-03-01',
     dateDisplay: 'March 1, 2025',
     category: 'Product Guide',
+    relatedPage: { to: '/biodegradable-carry-bags', label: '🛒 D-Cut & U-Cut carry bags — sizes & bulk pricing' },
     readTime: '4 min read',
     excerpt: "India's 12 million kirana stores need affordable, compliant carry bags after the plastic ban. Here's a simple size and type guide for retail shop owners.",
     sections: [
@@ -499,13 +504,24 @@ export function BlogPost() {
               <p style={{ fontSize: 14, color: '#666', marginBottom: 18, lineHeight: 1.7 }}>
                 RDN Bio Products supplies DRDO-certified PBAT bags pan India. WhatsApp us for a free quote.
               </p>
-              <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa">
-                WhatsApp us →
-              </a>
+              <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+                <a href="tel:+917301222666" className="btn-call">📞 Call Now</a>
+                <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa">
+                  WhatsApp us →
+                </a>
+              </div>
+              {post.relatedPage && (
+                <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid #d4e8b0' }}>
+                  <Link to={post.relatedPage.to} style={{ fontSize: 14, fontWeight: 700, color: 'var(--green-dark)', textDecoration: 'none' }}>
+                    {post.relatedPage.label}
+                  </Link>
+                </div>
+              )}
             </div>
 
-            <div style={{ marginTop: 28 }}>
+            <div style={{ marginTop: 28, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
               <Link to="/blog" style={{ fontSize: 14, color: 'var(--green-dark)', fontWeight: 600 }}>← Back to Blog</Link>
+              <Link to="/faq" style={{ fontSize: 14, color: 'var(--green-mid)', fontWeight: 600 }}>View all FAQs →</Link>
             </div>
           </div>
         </div>

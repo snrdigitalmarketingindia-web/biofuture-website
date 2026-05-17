@@ -199,6 +199,25 @@ export default function FAQ() {
             </div>
           ))}
 
+          {/* Industry quick-links */}
+          <div style={{ background: '#fff', border: '1px solid #e0eed0', borderRadius: 14, padding: '24px', marginTop: 32, marginBottom: 8 }}>
+            <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--green-dark)', marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Looking for industry-specific solutions?</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 10 }}>
+              {[
+                { to: '/temple-packaging-solutions', icon: '🛕', label: 'Temple & prasadam packaging' },
+                { to: '/food-packaging-solutions', icon: '🍽️', label: 'Restaurant & food industry' },
+                { to: '/institutional-packaging', icon: '🏥', label: 'Hospitals & institutions' },
+                { to: '/biodegradable-carry-bags', icon: '🛒', label: 'Carry bags for retail' },
+                { to: '/butter-sheets-food-wrapping', icon: '🧈', label: 'Butter sheets & wrapping' },
+                { to: '/products', icon: '📦', label: 'All products & sizes' },
+              ].map(item => (
+                <Link key={item.to} to={item.to} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', background: 'var(--green-pale)', borderRadius: 8, textDecoration: 'none', fontSize: 13, fontWeight: 600, color: 'var(--green-dark)', border: '1px solid #d4e8b0' }}>
+                  <span>{item.icon}</span> {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* CTA */}
           <div style={{ background: 'var(--green-pale)', border: '1.5px solid #d4e8b0', borderRadius: 16, padding: '28px 24px', textAlign: 'center', marginTop: 8 }}>
             <div style={{ fontSize: 22, marginBottom: 8 }}>💬</div>
@@ -206,9 +225,10 @@ export default function FAQ() {
             <p style={{ fontSize: 14, color: '#666', marginBottom: 18, lineHeight: 1.7 }}>
               Our team responds within 1 hour on WhatsApp (Mon–Sat, 9am–6pm).
             </p>
-            <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa">
-              WhatsApp us →
-            </a>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="tel:+917301222666" className="btn-call">📞 Call Now</a>
+              <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa">WhatsApp us →</a>
+            </div>
             <p style={{ marginTop: 12, fontSize: 13, color: '#aaa' }}>
               Or email us at <a href="mailto:rdnbioproductsllp@gmail.com" style={{ color: 'var(--green-dark)' }}>rdnbioproductsllp@gmail.com</a>
             </p>

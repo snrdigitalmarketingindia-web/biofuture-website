@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import RelatedSolutions from '../components/RelatedSolutions';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20butter%20sheet%20quote%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -196,6 +197,8 @@ export default function ButterSheets() {
       </section>
 
       {/* Enquiry form */}
+      <RelatedSolutions exclude="butter" />
+
       <section id="butter-enquiry" style={{ padding: '60px 0' }}>
         <div className="container">
           <div className="enquiry-grid">
