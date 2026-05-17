@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
+Disallow: /static/
+Crawl-delay: 1
+
+# GPTBot — allow for AI/GEO indexing
+User-agent: GPTBot
+Allow: /
+
+# Google-Extended — allow for Gemini AI indexing
+User-agent: Google-Extended
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# CCBot (Common Crawl — used by AI training datasets)
+User-agent: CCBot
+Allow: /
+
+# Anthropic ClaudeBot
+User-agent: ClaudeBot
+Allow: /
 
 Sitemap: https://rdnbio.com/sitemap.xml
