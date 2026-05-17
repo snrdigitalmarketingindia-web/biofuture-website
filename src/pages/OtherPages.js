@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20custom%20products";
 
+const bcBase = { '@context': 'https://schema.org', '@type': 'BreadcrumbList' };
+const bcHome = { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rdnbio.com/' };
+const customisationBreadcrumb = { ...bcBase, itemListElement: [bcHome, { '@type': 'ListItem', position: 2, name: 'Customisation', item: 'https://rdnbio.com/#/customisation' }] };
+const galleryBreadcrumb      = { ...bcBase, itemListElement: [bcHome, { '@type': 'ListItem', position: 2, name: 'Gallery', item: 'https://rdnbio.com/#/gallery' }] };
+const contactBreadcrumb      = { ...bcBase, itemListElement: [bcHome, { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://rdnbio.com/#/contact' }] };
+
 const customOptions = [
   {
     icon: '📐',
@@ -95,6 +101,7 @@ export function Customisation() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(customisationBreadcrumb)}} />
       {/* Hero */}
       <section className="page-hero">
         <div className="container">
@@ -377,6 +384,7 @@ export function Gallery() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(galleryBreadcrumb)}} />
       {/* Hero */}
       <section className="page-hero">
         <div className="container">
@@ -402,7 +410,7 @@ export function Gallery() {
                 {/* image area */}
                 <div className="gallery-img-wrap">
                   {item.photo
-                    ? <img src={item.photo} alt={item.name} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                    ? <img src={item.photo} alt={item.name} loading="lazy" style={{width:'100%',height:'100%',objectFit:'cover'}}/>
                     : item.svg
                   }
                 </div>
@@ -448,6 +456,7 @@ export function Gallery() {
 export function Contact() {
   useEffect(() => { document.title = 'Contact Us | Biodegradable Bags Supplier Hyderabad | RDN Bio Products'; }, []);
   const [form, setForm] = useState({ name:'', phone:'', email:'', subject:'', message:'' });
+  // breadcrumb schema injected below in JSX
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -468,6 +477,7 @@ export function Contact() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(contactBreadcrumb)}} />
       <section className="page-hero">
         <div className="container">
           <h1 className="section-title">Get in touch with us</h1>

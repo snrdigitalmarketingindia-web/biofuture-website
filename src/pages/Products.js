@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rdnbio.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://rdnbio.com/#/products' },
+  ],
+};
+
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
 const WA_ICON = (
@@ -28,7 +37,7 @@ function ProductCard({ id, title, subtitle, badge, photo, children }) {
         <div className="product-card-inner">
           {photo && (
             <div className="product-card-img">
-              <img src={photo} alt={title} style={{width:'100%',height:'100%',objectFit:'contain'}} />
+              <img src={photo} alt={title} loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
             </div>
           )}
           <div className="product-card-content">
@@ -104,6 +113,7 @@ export default function Products() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbSchema)}} />
       <section className="page-hero">
         <div className="container">
           <h1 className="section-title">Our biodegradable products</h1>
@@ -231,7 +241,7 @@ export default function Products() {
               <div className="card-body">
                 <div className="product-card-inner">
                   <div className="product-card-img">
-                    <img src="granules.png" alt="Bio compound granules" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                    <img src="granules.png" alt="Bio compound granules" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
                   </div>
                   <div className="product-card-content">
                     <p style={{fontSize:14,color:'#555',lineHeight:1.7,marginBottom:16}}>

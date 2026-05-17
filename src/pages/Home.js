@@ -1,6 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+const faqs = [
+  { q: 'What are RDN Bio Products bags made of?', a: 'Our bags are made from PBAT (Polybutylene Adipate Terephthalate) — a plant-based, petroleum-free material. They are 100% organic, BPA-free, and non-toxic, making them safe for food, medical, and everyday use.' },
+  { q: 'Are RDN Bio Products DRDO certified?', a: 'Yes. Our bags are manufactured using technology certified by the Defence Research and Development Organisation (DRDO), Government of India — one of the most rigorous quality and safety standards in the country, validating biodegradability, non-toxicity, and material safety.' },
+  { q: 'Do you supply biodegradable bags across India?', a: 'Yes. We supply pan India from our manufacturing unit in Hyderabad, Telangana — covering all states including Andhra Pradesh, Tamil Nadu, Karnataka, Maharashtra, Delhi NCR, and more. Bulk deliveries are handled via courier and transport.' },
+  { q: 'What is the minimum order quantity?', a: 'Minimum order quantities vary by product type and size. For standard sizes, orders start from single bundles. For custom sizes or printed bags, minimums apply. Contact us on WhatsApp at +91-7301222666 for specific MOQ details.' },
+  { q: 'Can I get custom printed or custom size biodegradable bags?', a: 'Yes. We offer full customisation — custom sizes, custom colors (white, green, black, blue, red, yellow and more), and brand printing with your logo and tagline. This is available for D-Cut bags, U/W-Cut bags, garbage bags, pouches, and grocery bags.' },
+  { q: 'How long do biodegradable bags take to decompose?', a: 'Our biodegradable bags decompose naturally within 180 days under composting conditions — significantly faster than conventional plastic bags which take hundreds of years to break down and leave toxic microplastics in soil and water.' },
+  { q: 'Are these bags safe for food packaging?', a: 'Yes. All RDN Bio Products bags are BPA-free and non-toxic. Our pouches, grocery bags, and butter covers are specifically designed for food contact use and are safe for packaging grocery items, dairy products, and spices.' },
+  { q: 'What types of biodegradable bags do you manufacture?', a: 'We manufacture D-Cut carry bags (7 sizes), U/W-Cut carry bags (14 sizes), garbage bags (8 sizes), pouches (4 sizes), grocery bags (8 sizes), butter covers (2 sizes), and bio compound granules (PBAT fillers). Over 30 size variants are available in standard ranges.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
 const tickerItems = [
@@ -81,6 +102,7 @@ export default function Home() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(faqSchema)}} />
       {/* Hero */}
       <section style={{background:'linear-gradient(135deg,#f6fbf0 0%,#e8f5d8 100%)',padding:'48px 0 40px',borderBottom:'1px solid #d4e8b0'}}>
         <div className="container">
@@ -105,7 +127,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-img">
-              <img src="hero2.png" alt="RDN Bio Products — Biodegradable bags" style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:16}} />
+              <img src="hero2.png" alt="RDN Bio Products — Biodegradable bags" loading="eager" style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:16}} />
             </div>
           </div>
         </div>
@@ -151,7 +173,7 @@ export default function Home() {
             {[...scrollProducts, ...scrollProducts].map((p, i) => (
               <Link to="/products" key={i} className="pscroll-card">
                 <div className="pscroll-img">
-                  <img src={p.photo} alt={p.name} style={{width:'100%',height:'100%',objectFit:'contain',padding:4}}/>
+                  <img src={p.photo} alt={p.name} loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain',padding:4}}/>
                 </div>
                 <div className="pscroll-name">{p.name}</div>
                 <div className="pscroll-desc">{p.desc}</div>
@@ -161,6 +183,25 @@ export default function Home() {
         </div>
         <div style={{textAlign:'center',marginTop:20}}>
           <Link to="/products" className="btn-outline">View all products with full specs →</Link>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{padding:'56px 0',borderBottom:'1px solid #f0f5e8'}}>
+        <div className="container" style={{maxWidth:780}}>
+          <h2 className="section-title">Frequently asked questions</h2>
+          <p className="section-sub">Everything you need to know about our biodegradable bags</p>
+          <div style={{marginTop:28}}>
+            {faqs.map((faq, i) => (
+              <details key={i} style={{borderBottom:'1px solid #e8f0dc',padding:'16px 0'}}>
+                <summary style={{fontWeight:600,fontSize:15,color:'var(--green-dark)',cursor:'pointer',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center',gap:12}}>
+                  <span>{faq.q}</span>
+                  <span style={{fontSize:20,flexShrink:0,color:'var(--green-mid)'}}>+</span>
+                </summary>
+                <p style={{marginTop:12,fontSize:14,color:'#555',lineHeight:1.75}}>{faq.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

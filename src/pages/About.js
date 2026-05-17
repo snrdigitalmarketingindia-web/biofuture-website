@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rdnbio.com/' },
+    { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://rdnbio.com/#/about' },
+  ],
+};
+
 const values = [
   { icon: '🛡️', title: 'Safety first', desc: 'BPA-free, non-toxic materials. Safe for food, medical, and everyday use.' },
   { icon: '♻️', title: 'Easy decomposition', desc: 'Breaks down naturally without leaving toxic residue in soil or water.' },
@@ -25,6 +34,7 @@ export default function About() {
   useEffect(() => { document.title = 'About Us | DRDO Certified Biodegradable Bags Manufacturer Hyderabad | RDN Bio Products'; }, []);
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbSchema)}} />
       <section className="page-hero">
         <div className="container">
           <div className="drdo-badge" style={{marginBottom:16}}>✓ DRDO Certified Technology</div>
@@ -63,7 +73,7 @@ export default function About() {
               </p>
             </div>
             <div style={{width:160,height:160,flexShrink:0}}>
-              <img src="drdo-logo.png" alt="DRDO — Defence Research and Development Organisation" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+              <img src="drdo-logo.png" alt="DRDO — Defence Research and Development Organisation" loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
             </div>
           </div>
         </div>
