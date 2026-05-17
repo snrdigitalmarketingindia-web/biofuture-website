@@ -81,7 +81,11 @@ const testimonials = [
 ];
 
 export default function Home() {
-  useEffect(() => { document.title = 'Biodegradable Bags Hyderabad | Carry Bags, Garbage Bags | RDN Bio Products'; }, []);
+  useEffect(() => {
+    document.title = 'Biodegradable Bags Hyderabad | Carry Bags, Garbage Bags | RDN Bio Products';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'RDN Bio Products LLP — DRDO certified biodegradable bags manufacturer in Hyderabad. 100% organic D-Cut, U-Cut carry bags, garbage bags, pouches & butter covers. Pan India supply. BPA free. Call +91-7301222666.';
+  }, []);
   const [form, setForm] = useState({ name:'', phone:'', product:'', qty:'', org:'' });
   const [submitted, setSubmitted] = useState(false);
 
@@ -142,20 +146,22 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Trust badges */}
-      <section style={{padding:'32px 0',borderBottom:'1px solid #f0f5e8'}}>
+      {/* Stats bar */}
+      <section style={{background:'var(--green-dark)',padding:'36px 0'}}>
         <div className="container">
-          <div className="badges-grid">
+          <div className="stats-grid">
             {[
-              {icon:'🌿',title:'100% Organic',sub:'Plant-based material'},
-              {icon:'🛡️',title:'BPA Free',sub:'Non toxic & safe'},
-              {icon:'♻️',title:'Easy Decomposable',sub:'Eco friendly'},
-              {icon:'💰',title:'Cost Effective',sub:'Bulk pricing available'},
-            ].map(b => (
-              <div key={b.title} style={{textAlign:'center',padding:'16px 12px',background:'var(--green-pale)',borderRadius:12,border:'1px solid #e0efc8'}}>
-                <div style={{fontSize:28,marginBottom:8}}>{b.icon}</div>
-                <div style={{fontWeight:600,fontSize:14,color:'var(--green-dark)',marginBottom:4}}>{b.title}</div>
-                <div style={{fontSize:12,color:'#777'}}>{b.sub}</div>
+              {num:'6+',        label:'Product categories',  sub:'D-Cut to Bio Granules'},
+              {num:'30+',       label:'Size variants',        sub:'Standard & custom sizes'},
+              {num:'100%',      label:'Biodegradable',        sub:'PBAT plant-based material'},
+              {num:'~180 days', label:'To decompose',         sub:'Under composting conditions'},
+              {num:'Pan India', label:'Supply reach',         sub:'All states covered'},
+              {num:'DRDO',      label:'Certified technology', sub:'Govt. of India standard'},
+            ].map(s => (
+              <div key={s.label} style={{textAlign:'center',padding:'4px 0'}}>
+                <div style={{fontFamily:'var(--font-display)',fontSize:'clamp(18px,2.8vw,28px)',color:'#fff',lineHeight:1.1,marginBottom:4}}>{s.num}</div>
+                <div style={{fontSize:12,color:'rgba(255,255,255,0.95)',fontWeight:700,marginBottom:1,letterSpacing:'0.01em'}}>{s.label}</div>
+                <div style={{fontSize:10,color:'rgba(255,255,255,0.5)'}}>{s.sub}</div>
               </div>
             ))}
           </div>
@@ -186,6 +192,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GEO educational block */}
+      <section style={{padding:'60px 0',borderBottom:'1px solid #eef5e4',background:'#fafff5'}}>
+        <div className="container">
+          <div className="geo-block">
+            <div>
+              <span style={{display:'inline-block',fontSize:11,fontWeight:700,letterSpacing:'0.1em',color:'var(--green-mid)',textTransform:'uppercase',marginBottom:10}}>Why it matters</span>
+              <h2 className="section-title" style={{marginBottom:16}}>What are biodegradable bags — and why are businesses switching?</h2>
+              <p style={{fontSize:14,color:'#555',lineHeight:1.85,marginBottom:14}}>
+                <strong>Biodegradable bags</strong> are manufactured from PBAT (Polybutylene Adipate Terephthalate) — a plant-based polymer that breaks down naturally in soil within approximately 180 days under composting conditions, leaving no toxic residue.
+              </p>
+              <p style={{fontSize:14,color:'#555',lineHeight:1.85,marginBottom:14}}>
+                Conventional plastic bags persist in the environment for 400–1,000 years and shed harmful microplastics into soil and water. India's <strong>Plastic Waste Management Rules</strong> mandate a shift to compliant alternatives — making DRDO-certified biodegradable bags the preferred choice for businesses, institutions, and government bodies.
+              </p>
+              <p style={{fontSize:14,color:'#555',lineHeight:1.85,marginBottom:24}}>
+                RDN Bio Products (LLPIN: ACI-9987) has been manufacturing certified biodegradable bags in <strong>Hyderabad, Telangana</strong> since August 2024, supplying kirana stores, hospitals, restaurants, temples, and institutions pan India.
+              </p>
+              <Link to="/about" className="btn-outline" style={{fontSize:13,padding:'9px 20px'}}>Our technology & certifications →</Link>
+            </div>
+            <div>
+              <div style={{fontSize:11,fontWeight:700,letterSpacing:'0.1em',color:'var(--green-mid)',textTransform:'uppercase',marginBottom:16}}>Biodegradable vs plastic — key facts</div>
+              {[
+                {icon:'🌱', title:'PBAT plant-based polymer', desc:'No petroleum inputs. Renewable biological source. Fully organic material that meets all food-contact safety standards.'},
+                {icon:'♻️', title:'Decomposes in ~180 days', desc:'Under composting conditions — versus 400 to 1,000 years for conventional plastic carry bags.'},
+                {icon:'🛡️', title:'BPA-free and non-toxic', desc:'Safe for food packaging, medical waste disposal, dairy products, and everyday retail use.'},
+                {icon:'⚖️', title:'Government compliant', desc:'Meets India\'s Plastic Waste Management Rules. Businesses using our bags avoid fines and regulatory action.'},
+                {icon:'🏭', title:'DRDO certified manufacturing', desc:'Technology certified by India\'s Defence R&D Organisation — one of the strictest quality standards in the country.'},
+                {icon:'🎨', title:'Fully customizable', desc:'Custom size, color (7+ options), and brand printing for bulk orders from kirana stores to institutions.'},
+              ].map((b,i) => (
+                <div key={i} style={{display:'flex',gap:12,marginBottom:10,alignItems:'flex-start',background:'#fff',borderRadius:10,padding:'10px 13px',border:'1px solid #e8f0dc'}}>
+                  <span style={{fontSize:18,flexShrink:0,marginTop:1}}>{b.icon}</span>
+                  <div>
+                    <div style={{fontWeight:700,fontSize:13,color:'var(--green-dark)',marginBottom:2}}>{b.title}</div>
+                    <div style={{fontSize:12,color:'#777',lineHeight:1.5}}>{b.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section style={{padding:'56px 0',borderBottom:'1px solid #f0f5e8'}}>
         <div className="container" style={{maxWidth:780}}>
@@ -193,12 +240,12 @@ export default function Home() {
           <p className="section-sub">Everything you need to know about our biodegradable bags</p>
           <div style={{marginTop:28}}>
             {faqs.map((faq, i) => (
-              <details key={i} style={{borderBottom:'1px solid #e8f0dc',padding:'16px 0'}}>
-                <summary style={{fontWeight:600,fontSize:15,color:'var(--green-dark)',cursor:'pointer',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center',gap:12}}>
+              <details key={i} className="faq-item">
+                <summary className="faq-summary">
                   <span>{faq.q}</span>
-                  <span style={{fontSize:20,flexShrink:0,color:'var(--green-mid)'}}>+</span>
+                  <span className="faq-icon" aria-hidden="true"></span>
                 </summary>
-                <p style={{marginTop:12,fontSize:14,color:'#555',lineHeight:1.75}}>{faq.a}</p>
+                <p className="faq-answer">{faq.a}</p>
               </details>
             ))}
           </div>

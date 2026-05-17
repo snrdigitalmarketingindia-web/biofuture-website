@@ -10,6 +10,22 @@ const breadcrumbSchema = {
   ],
 };
 
+const productListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'RDN Bio Products — Biodegradable Bag Range',
+  description: 'DRDO certified 100% biodegradable bags manufactured in Hyderabad, India. BPA-free PBAT organic material.',
+  url: 'https://rdnbio.com/#/products',
+  itemListElement: [
+    { '@type':'ListItem', position:1, item:{ '@type':'Product', name:'D-Cut Biodegradable Carry Bags', description:'D-Cut shape biodegradable carry bags. 7 sizes (8×12 to 16×24 inch), 35–45 microns. Ideal for retail shops, kirana stores, supermarkets. DRDO certified, BPA-free, PBAT material.', image:'https://rdnbio.com/dcut-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP',url:'https://rdnbio.com'}, material:'PBAT — Polybutylene Adipate Terephthalate', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:2, item:{ '@type':'Product', name:'U/W-Cut Biodegradable Carry Bags', description:'U/W-Cut biodegradable carry bags. 14 sizes (8×10 to 27×30 inch), 30–50 microns, load 0.5–10 kg. Ideal for grocery, hospitals, supermarkets.', image:'https://rdnbio.com/ucut-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:3, item:{ '@type':'Product', name:'Biodegradable Garbage Bags', description:'Heavy-duty biodegradable garbage bags. 8 sizes (17×19 to 35×45 inch), load 1–18 kg. Ideal for hospitals, restaurants, offices, municipalities.', image:'https://rdnbio.com/garbage-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:4, item:{ '@type':'Product', name:'Biodegradable Pouches and Grocery Bags', description:'Biodegradable pouches (4×6 to 8×11 inch) and grocery bags (5×8 to 16×24 inch). 12 size variants for food packaging, spices, grocery retail.', image:'https://rdnbio.com/pouches-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:5, item:{ '@type':'Product', name:'Biodegradable Butter Covers', description:'Food-safe biodegradable butter covers for dairy industry. 2 sizes (9×9 and 12×12 inch), 30 microns. BPA-free.', image:'https://rdnbio.com/butter-bag.png', brand:{'@type':'Brand',name:'BioFuture'}, manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, material:'PBAT', offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+    { '@type':'ListItem', position:6, item:{ '@type':'Product', name:'Bio Compound Granules PBAT', description:'PBAT-based bio compound granules and fillers for manufacturers. Raw material for producing biodegradable bags. Bulk quantities available.', image:'https://rdnbio.com/granules.png', manufacturer:{'@type':'Organization',name:'RDN Bio Products LLP'}, offers:{'@type':'Offer',availability:'https://schema.org/InStock',areaServed:'IN'} } },
+  ],
+};
+
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
 const WA_ICON = (
@@ -103,7 +119,11 @@ function EnquiryForm() {
 }
 
 export default function Products() {
-  useEffect(() => { document.title = 'Biodegradable Carry Bags, Garbage Bags & Pouches | D-Cut, U-Cut | RDN Bio Products'; }, []);
+  useEffect(() => {
+    document.title = 'Biodegradable Carry Bags, Garbage Bags & Pouches | D-Cut, U-Cut | RDN Bio Products';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'Buy DRDO certified biodegradable D-Cut bags (7 sizes), U/W-Cut bags (14 sizes), garbage bags (8 sizes), pouches & butter covers. Manufacturer in Hyderabad. Bulk orders. Pan India delivery.';
+  }, []);
   const [active, setActive] = useState('all');
   const enquiryRef = useRef(null);
   const filters = ['all','d-cut','u-cut','garbage','pouches','butter','granules'];
@@ -114,6 +134,7 @@ export default function Products() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbSchema)}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(productListSchema)}} />
       <section className="page-hero">
         <div className="container">
           <h1 className="section-title">Our biodegradable products</h1>

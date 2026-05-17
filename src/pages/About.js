@@ -31,7 +31,11 @@ const timeline = [
 const states = ['Hyderabad','Telangana','Andhra Pradesh','Tamil Nadu','Karnataka','Maharashtra','Delhi NCR','+ all states'];
 
 export default function About() {
-  useEffect(() => { document.title = 'About Us | DRDO Certified Biodegradable Bags Manufacturer Hyderabad | RDN Bio Products'; }, []);
+  useEffect(() => {
+    document.title = 'About Us | DRDO Certified Biodegradable Bags Manufacturer | RDN Bio Products Hyderabad';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'RDN Bio Products LLP (LLPIN: ACI-9987), incorporated August 2024 in Hyderabad. DRDO certified biodegradable bags manufacturer. 100% organic PBAT-based bags. BPA free. Pan India supply from Telangana.';
+  }, []);
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(breadcrumbSchema)}} />

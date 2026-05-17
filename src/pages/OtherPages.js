@@ -78,7 +78,11 @@ const steps = [
 ];
 
 export function Customisation() {
-  useEffect(() => { document.title = 'Custom Biodegradable Bags | Size, Color & Brand Printing | RDN Bio Products'; }, []);
+  useEffect(() => {
+    document.title = 'Custom Biodegradable Bags | Size, Color & Brand Printing | RDN Bio Products';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'Custom biodegradable bags with your brand name, logo, size, and color. D-Cut, U-Cut, garbage bags, pouches — any spec. Bulk orders. DRDO certified. Hyderabad manufacturer. Pan India delivery.';
+  }, []);
   const [form, setForm] = useState({ name:'', phone:'', product:'', size:'', qty:'', color:'', print:'' });
   const [submitted, setSubmitted] = useState(false);
 
@@ -379,7 +383,11 @@ const galleryItems = [
 ];
 
 export function Gallery() {
-  useEffect(() => { document.title = 'Gallery | Biodegradable Bags Photos | RDN Bio Products Hyderabad'; }, []);
+  useEffect(() => {
+    document.title = 'Gallery | Biodegradable Bags Photos | RDN Bio Products Hyderabad';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'Gallery of RDN Bio Products biodegradable bags — D-Cut carry bags, garbage bags, U-Cut bags, pouches, butter covers and bio granules. DRDO certified. Hyderabad manufacturer.';
+  }, []);
   const [active, setActive] = useState(null);
 
   return (
@@ -454,9 +462,12 @@ export function Gallery() {
 }
 
 export function Contact() {
-  useEffect(() => { document.title = 'Contact Us | Biodegradable Bags Supplier Hyderabad | RDN Bio Products'; }, []);
+  useEffect(() => {
+    document.title = 'Contact Us | Biodegradable Bags Supplier Hyderabad | RDN Bio Products';
+    const m = document.querySelector('meta[name="description"]');
+    if (m) m.content = 'Contact RDN Bio Products LLP, Hyderabad. Phone: +91-7301222666 / +91-7301777444. Email: rdnbioproductsllp@gmail.com. Located at Karmanghat, Saroornagar, Hyderabad 500035. Mon–Sat 9am–6pm.';
+  }, []);
   const [form, setForm] = useState({ name:'', phone:'', email:'', subject:'', message:'' });
-  // breadcrumb schema injected below in JSX
   const [submitted, setSubmitted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
