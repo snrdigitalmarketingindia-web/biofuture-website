@@ -7,6 +7,7 @@ const ALL_SOLUTIONS = {
   institutional: { icon: '🏥', title: 'Hospitals & Institutions',  desc: 'Garbage bags, waste liners, bulk institutional supply', link: '/institutional-packaging',   color: '#e3f2fd', border: '#90caf9' },
   carry:         { icon: '🛒', title: 'Carry Bags (Retail)',         desc: 'D-Cut & U/W-Cut bags, 21 sizes, custom printing',   link: '/biodegradable-carry-bags',   color: '#e8f5e9', border: '#a5d6a7' },
   butter:        { icon: '🧈', title: 'Butter Sheets',               desc: 'Food-grade wrapping for dairy, bakery & sweets',    link: '/butter-sheets-food-wrapping', color: '#fce4ec', border: '#f48fb1' },
+  retail:        { icon: '🏪', title: 'Retail & Supermarkets',       desc: 'Branded carry bags for kirana stores, supermarkets & retail chains', link: '/retail-packaging-solutions', color: '#e8f5e9', border: '#a5d6a7' },
 };
 
 export default function RelatedSolutions({ exclude }) {

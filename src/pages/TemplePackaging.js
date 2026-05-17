@@ -50,6 +50,26 @@ const faqSchema = {
   ],
 };
 
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Biodegradable Temple Packaging Bags',
+  description: 'DRDO certified 100% biodegradable PBAT bags for temples, mutts and pilgrimage centres. Food-safe prasadam bags, flower offering bags, annadanam covers and donation counter bags. Custom temple branding available.',
+  brand: { '@type': 'Brand', name: 'RDN Bio Products' },
+  manufacturer: { '@type': 'Organization', name: 'RDN Bio Products LLP', url: 'https://rdnbio.com' },
+  material: 'PBAT — Polybutylene Adipate Terephthalate',
+  offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', areaServed: 'IN' },
+};
+
+const festivalCalendar = [
+  { month: 'Jan–Feb', festivals: 'Makar Sankranti, Pongal, Thaipusam', note: 'Order 30 days prior' },
+  { month: 'Mar–Apr', festivals: 'Ugadi, Ram Navami, Hanuman Jayanti', note: 'High prasadam demand' },
+  { month: 'Aug–Sep', festivals: 'Krishnashtami, Vinayaka Chaturthi', note: 'Highest volume season' },
+  { month: 'Oct–Nov', festivals: 'Navratri, Dussehra, Diwali, Karthika', note: 'Festival rush — 45 day lead' },
+  { month: 'Nov–Dec', festivals: 'Vaikunta Ekadasi, Pushkaram', note: 'Pilgrimage season peak' },
+  { month: 'Year-round', festivals: 'Weekly pooja, annadanam, darshan days', note: 'Recurring monthly order' },
+];
+
 const solutions = [
   { icon: '🌸', title: 'Prasadam Bags', desc: 'D-Cut & U-Cut bags for prasadam distribution. Food-grade, BPA-free. Available with custom temple name and deity printing. Sizes 6×8 to 14×18 inches.' },
   { icon: '🌺', title: 'Flower Offering Bags', desc: 'Lightweight U-Cut bags for flower vendors at temple gates. Ideal for mela flower bunches, puja garlands, and loose flowers. Multiple sizes available.' },
@@ -92,11 +112,11 @@ const faqs = [
   },
   {
     q: 'Can I print our temple name and deity image on the bags?',
-    a: 'Yes. We offer custom printing with your temple name, logo, and deity image. Minimum order quantity for custom printing is 1,000 bags. Single and multi-color printing options are available to suit your budget.',
+    a: 'Yes. We offer custom printing with your temple name, logo, and deity image. Minimum order quantity for custom printing is 1,000 bags. Single and multi-color printing options are available. Pantone color matching is available for specific saffron, yellow, or maroon shades.',
   },
   {
     q: 'What is the minimum order for festival bulk supply?',
-    a: 'Minimum order quantity for plain bags starts from 500 units. For custom-printed temple bags the MOQ is 1,000 units. We strongly recommend placing festival orders at least 30 days in advance to ensure timely delivery.',
+    a: 'Minimum order quantity for plain bags starts from 500 units. For custom-printed temple bags the MOQ is 1,000 units. We strongly recommend placing festival orders at least 30 days in advance, and 45 days for major festivals like Diwali and Ganesh Chaturthi.',
   },
   {
     q: 'Are these bags safe for food contact (prasadam)?',
@@ -105,6 +125,18 @@ const faqs = [
   {
     q: 'Do you supply for temples outside Hyderabad?',
     a: 'Yes. We supply pan India. Orders have been fulfilled for temples across Andhra Pradesh, Telangana, Tamil Nadu, Karnataka, Maharashtra, and other states. Bulk orders qualify for freight-inclusive pricing on select zones.',
+  },
+  {
+    q: 'How are biodegradable temple bags different from regular plastic bags?',
+    a: 'Conventional plastic carry bags take 400–1,000 years to decompose and leave toxic microplastics in soil and water — including in rivers, fields and sacred spaces near temples. Our PBAT biodegradable bags decompose naturally in approximately 180 days under composting conditions, returning to carbon dioxide, water and organic biomass without leaving toxic residue. They are also compliant with India\'s Plastic Waste Management Rules.',
+  },
+  {
+    q: 'Can temples get GST invoicing for bulk orders?',
+    a: 'Yes. RDN Bio Products LLP issues GST invoices for all bulk orders. Our GSTIN is available on request. Institutional and temple trust purchase orders (POs) are accepted. Contact us at rdnbioproductsllp@gmail.com for institutional billing.',
+  },
+  {
+    q: 'What colours are available for temple bags?',
+    a: 'Standard colours available: white, saffron/orange, yellow, and natural (transparent). Custom colours including maroon, red, and gold can be produced for bulk orders of 5,000 bags or more. Pantone-matched prints are available for brand-specific temple colours.',
   },
 ];
 
@@ -140,6 +172,7 @@ export default function TemplePackaging() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
 
       {/* Hero */}
       <section className="page-hero">
@@ -209,6 +242,78 @@ export default function TemplePackaging() {
                 <p style={{ fontSize: 13, color: '#666', lineHeight: 1.7 }}>{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Festival Planning Calendar */}
+      <section style={{ padding: '56px 0', borderBottom: '1px solid #eef5e4', background: '#fff' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: 36 }}>
+            <h2 className="section-title">Festival Packaging Calendar</h2>
+            <p className="section-sub">Plan your bulk orders in advance — never run out during festivals</p>
+          </div>
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+              <thead>
+                <tr style={{ background: 'var(--green-dark)', color: '#fff' }}>
+                  {['Season', 'Key Festivals', 'Ordering Advice'].map(h => (
+                    <th key={h} style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700, fontSize: 12, letterSpacing: '0.05em' }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {festivalCalendar.map((row, i) => (
+                  <tr key={i} style={{ background: i % 2 === 0 ? 'var(--green-pale)' : '#fff', borderBottom: '1px solid #e0eed0' }}>
+                    <td style={{ padding: '12px 16px', fontWeight: 700, color: 'var(--green-dark)', whiteSpace: 'nowrap' }}>{row.month}</td>
+                    <td style={{ padding: '12px 16px', color: '#444' }}>{row.festivals}</td>
+                    <td style={{ padding: '12px 16px', color: '#666', fontSize: 13 }}>
+                      <span style={{ background: '#fff3e0', color: '#e65100', padding: '3px 10px', borderRadius: 12, fontWeight: 600, fontSize: 12 }}>{row.note}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div style={{ marginTop: 24, textAlign: 'center' }}>
+            <a href="#temple-enquiry" className="btn-primary" style={{ fontSize: 14 }}>Plan your festival order →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Eco-Dharma Section */}
+      <section style={{ padding: '56px 0', background: 'linear-gradient(135deg,#1a3a06 0%,#2d5a0e 100%)', borderBottom: '2px solid #1a3a06' }}>
+        <div className="container">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 40, alignItems: 'center' }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', marginBottom: 12 }}>🌿 Eco-Dharma Initiative</div>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px,3.5vw,32px)', color: '#fff', lineHeight: 1.3, marginBottom: 18 }}>
+                Plastic-free devotion is the highest offering
+              </h2>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.85)', lineHeight: 1.85, marginBottom: 16 }}>
+                Our scriptures teach us to revere the five elements — earth, water, fire, air, and space. Single-use plastic contaminates all five. Every temple that switches to biodegradable packaging becomes a sanctuary of eco-dharma — protecting the sacred environment for future generations of devotees.
+              </p>
+              <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.85)', lineHeight: 1.85, marginBottom: 24 }}>
+                RDN Bio Products supports temples, mutts, and pilgrimage centres across India in building a plastic-free ecosystem — from the prasadam counter to the flower market to the donation hundi.
+              </p>
+              <a href={WA_LINK} target="_blank" rel="noreferrer" className="btn-wa" style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                {WA_SVG} Join the Plastic-Free Temple Initiative
+              </a>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+              {[
+                { icon: '🏛️', title: 'Temple premises', desc: 'Clean, plastic-free courtyards and sanctums' },
+                { icon: '🌊', title: 'Sacred rivers', desc: 'No plastic waste reaching Godavari, Krishna, Ganga' },
+                { icon: '🌸', title: 'Offering bags', desc: 'Every flower bag decomposes back to earth' },
+                { icon: '🙏', title: 'Devotee trust', desc: 'Eco-conscious devotees choose plastic-free temples' },
+              ].map(item => (
+                <div key={item.title} style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: 14, padding: '20px 16px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 28, marginBottom: 10 }}>{item.icon}</div>
+                  <div style={{ fontWeight: 700, fontSize: 13, color: '#fff', marginBottom: 6 }}>{item.title}</div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item.desc}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

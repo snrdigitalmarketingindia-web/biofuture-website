@@ -208,6 +208,7 @@ export default function FAQ() {
                 { to: '/food-packaging-solutions', icon: '🍽️', label: 'Restaurant & food industry' },
                 { to: '/institutional-packaging', icon: '🏥', label: 'Hospitals & institutions' },
                 { to: '/biodegradable-carry-bags', icon: '🛒', label: 'Carry bags for retail' },
+                { to: '/retail-packaging-solutions', icon: '🏪', label: 'Retail & supermarkets' },
                 { to: '/butter-sheets-food-wrapping', icon: '🧈', label: 'Butter sheets & wrapping' },
                 { to: '/products', icon: '📦', label: 'All products & sizes' },
               ].map(item => (

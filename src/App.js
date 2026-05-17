@@ -14,6 +14,7 @@ import FoodPackaging from './pages/FoodPackaging';
 import InstitutionalPackaging from './pages/InstitutionalPackaging';
 import CarryBags from './pages/CarryBags';
 import ButterSheets from './pages/ButterSheets';
+import RetailPackaging from './pages/RetailPackaging';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -60,6 +61,9 @@ function Navbar() {
                 <NavLink to="/butter-sheets-food-wrapping" onClick={close} className="nav-dropdown-item">
                   🧈 Butter Sheets
                 </NavLink>
+                <NavLink to="/retail-packaging-solutions" onClick={close} className="nav-dropdown-item">
+                  🏪 Retail &amp; Supermarkets
+                </NavLink>
               </div>
             )}
           </li>
@@ -87,6 +91,7 @@ function Navbar() {
         <NavLink to="/institutional-packaging" onClick={close} style={{ paddingLeft: 28 }}>🏥 Institutional</NavLink>
         <NavLink to="/biodegradable-carry-bags" onClick={close} style={{ paddingLeft: 28 }}>🛒 Carry Bags</NavLink>
         <NavLink to="/butter-sheets-food-wrapping" onClick={close} style={{ paddingLeft: 28 }}>🧈 Butter Sheets</NavLink>
+        <NavLink to="/retail-packaging-solutions" onClick={close} style={{ paddingLeft: 28 }}>🏪 Retail &amp; Supermarkets</NavLink>
         <NavLink to="/blog" onClick={close}>Blog</NavLink>
         <NavLink to="/faq" onClick={close}>FAQ</NavLink>
         <NavLink to="/gallery" onClick={close}>Gallery</NavLink>
@@ -121,6 +126,7 @@ function Footer() {
             <p><a href="#/institutional-packaging" style={{ color: 'rgba(255,255,255,0.75)' }}>🏥 Hospitals &amp; Institutions</a></p>
             <p><a href="#/biodegradable-carry-bags" style={{ color: 'rgba(255,255,255,0.75)' }}>🛒 Carry Bags</a></p>
             <p><a href="#/butter-sheets-food-wrapping" style={{ color: 'rgba(255,255,255,0.75)' }}>🧈 Butter Sheets</a></p>
+            <p><a href="#/retail-packaging-solutions" style={{ color: 'rgba(255,255,255,0.75)' }}>🏪 Retail &amp; Supermarkets</a></p>
           </div>
 
           {/* Col 3 — Contact */}
@@ -208,6 +214,7 @@ export default function App() {
         <Route path="/institutional-packaging" element={<InstitutionalPackaging />} />
         <Route path="/biodegradable-carry-bags" element={<CarryBags />} />
         <Route path="/butter-sheets-food-wrapping" element={<ButterSheets />} />
+        <Route path="/retail-packaging-solutions" element={<RetailPackaging />} />
       </Routes>
       <Footer />
       <FloatingWA />
