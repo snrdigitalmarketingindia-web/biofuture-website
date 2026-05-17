@@ -101,9 +101,9 @@ const faqs = [
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Biodegradable Packaging Solutions India | Manufacturer | RDN Bio Products Hyderabad';
+    document.title = 'Biodegradable Carry Bags & Packaging Manufacturer India | RDN Bio Products Hyderabad';
     const m = document.querySelector('meta[name="description"]');
-    if (m) m.content = 'RDN Bio Products LLP — India\'s DRDO certified biodegradable packaging manufacturer in Hyderabad. Replacing single-use plastic for retail, food, temples & institutions. D-Cut bags, garbage bags, pouches, butter covers. Pan India supply. Call +91-7301222666.';
+    if (m) m.content = 'RDN Bio Products LLP — DRDO certified biodegradable packaging manufacturer in Hyderabad. Carry bags, garbage bags, pouches & butter covers. D-Cut, U/W-Cut, custom printing. Pan India supply. Call +91-7301222666.';
   }, []);
 
   const [form, setForm] = useState({ name: '', phone: '', product: '', qty: '', org: '' });
@@ -138,10 +138,11 @@ export default function Home() {
                 <span className="drdo-badge">✓ DRDO Certified Technology</span>
                 <span style={{ background: '#fff', border: '1px solid #c5e09a', borderRadius: 20, padding: '4px 12px', fontSize: 11, fontWeight: 700, color: 'var(--green-dark)' }}>🇮🇳 Made in Hyderabad</span>
               </div>
-              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(26px,4.5vw,44px)', lineHeight: 1.15, color: 'var(--green-dark)', marginBottom: 16 }}>
-                India's Sustainable<br />
-                <span style={{ color: 'var(--green-mid)' }}>Plastic Replacement</span><br />
-                Solutions Provider
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', color: 'var(--green-mid)', textTransform: 'uppercase', marginBottom: 10 }}>🏭 Biodegradable Packaging Manufacturer · Hyderabad, India</div>
+              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px,4vw,42px)', lineHeight: 1.15, color: 'var(--green-dark)', marginBottom: 16 }}>
+                Biodegradable Carry Bags<br />
+                &amp; <span style={{ color: 'var(--green-mid)' }}>Compostable Packaging</span><br />
+                Manufactured in India
               </h1>
               <p style={{ fontSize: 'clamp(14px,1.8vw,17px)', color: '#444', marginBottom: 10, lineHeight: 1.75, maxWidth: 560 }}>
                 Certified biodegradable packaging for <strong>retail stores, restaurants, temples, hospitals,</strong> and institutions across India. Replace plastic legally, affordably, and responsibly.
@@ -279,8 +280,11 @@ export default function Home() {
               <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 14 }}>
                 India's <strong>Plastic Waste Management Rules</strong> mandate a shift to compliant alternatives — making DRDO-certified biodegradable bags the preferred choice for businesses, institutions, temples, and government bodies across the country.
               </p>
-              <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 24 }}>
+              <p style={{ fontSize: 14, color: '#555', lineHeight: 1.85, marginBottom: 14 }}>
                 RDN Bio Products (LLPIN: ACI-9987) has been manufacturing certified biodegradable bags in <strong>Hyderabad, Telangana</strong> since August 2024, supplying kirana stores, hospitals, restaurants, temples, and institutions pan India.
+              </p>
+              <p style={{ fontSize: 13, color: '#777', lineHeight: 1.8, marginBottom: 24, padding: '12px 16px', background: '#f8fcf2', borderLeft: '3px solid var(--green-mid)', borderRadius: '0 8px 8px 0' }}>
+                <strong>RDN Bio Products LLP</strong> (LLPIN: ACI-9987) is a biodegradable packaging manufacturer incorporated in August 2024 in Hyderabad, Telangana, India. The company manufactures D-Cut carry bags, U/W-Cut carry bags, garbage bags, food pouches, grocery bags, butter covers, and PBAT bio compound granules using DRDO-certified technology. Products are BPA-free, 100% organic, and compliant with India's Plastic Waste Management Rules. RDN Bio Products supplies retail stores, supermarkets, hospitals, restaurants, temples, and government institutions across India, with custom size and brand printing available for bulk orders.
               </p>
               <Link to="/about" className="btn-outline" style={{ fontSize: 13 }}>Our technology &amp; certifications →</Link>
             </div>

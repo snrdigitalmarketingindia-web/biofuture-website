@@ -15,7 +15,7 @@ import InstitutionalPackaging from './pages/InstitutionalPackaging';
 import CarryBags from './pages/CarryBags';
 import ButterSheets from './pages/ButterSheets';
 
-const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
+const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
 );
@@ -155,7 +155,7 @@ function Footer() {
 
         <div className="footer-bottom">
           <span>© 2026 RDN Bio Products LLP</span>
-          <span>I am NOT Plastic 🌿</span>
+          <span>Biodegradable Packaging Manufacturer — Hyderabad, India 🌿</span>
         </div>
       </div>
     </footer>
@@ -177,6 +177,9 @@ function StickyMobileBar() {
     <div className="sticky-mobile-bar">
       <a href="tel:+917301222666" className="sticky-bar-call">
         📞 Call Now
+      </a>
+      <a href="#enquiry" className="sticky-bar-quote">
+        📩 Get Quote
       </a>
       <a href={WA_LINK} target="_blank" rel="noreferrer" className="sticky-bar-wa">
         {WA_SVG} WhatsApp

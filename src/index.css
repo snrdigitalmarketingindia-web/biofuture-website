@@ -1098,8 +1098,8 @@ details[open] .faq-icon {
   background:#fff;
   box-shadow:0 -3px 16px rgba(0,0,0,0.18);
   padding:10px 12px;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:6px;
 }
 .sticky-bar-call {
   display:flex;
@@ -1131,6 +1131,21 @@ details[open] .faq-icon {
   text-align:center;
 }
 .sticky-bar-wa:hover { background:#20b658; }
+.sticky-bar-quote {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  background:#f57c00;
+  color:#fff !important;
+  border-radius:9px;
+  padding:11px 8px;
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+  text-align:center;
+}
+.sticky-bar-quote:hover { background:#e65100; }
 @media (max-width:768px) {
   .sticky-mobile-bar { display:grid; }
   /* Prevent floating WA button overlapping sticky bar */

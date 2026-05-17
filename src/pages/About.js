@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
+const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20RDN%20Bio%20Products%20biodegradable%20packaging";
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -42,9 +42,12 @@ export default function About() {
       <section className="page-hero">
         <div className="container">
           <div className="drdo-badge" style={{marginBottom:16}}>✓ DRDO Certified Technology</div>
-          <h1 className="section-title">We make plastic's best replacement — and we make it in Hyderabad.</h1>
-          <p style={{fontSize:16,color:'#555',maxWidth:680,lineHeight:1.8}}>
+          <h1 className="section-title">RDN Bio Products — Biodegradable Packaging Manufacturer in Hyderabad</h1>
+          <p style={{fontSize:16,color:'#555',maxWidth:680,lineHeight:1.8,marginBottom:16}}>
             RDN Bio Products LLP was founded with one mission: to give Indian businesses an affordable, certified, eco-friendly alternative to single-use plastic bags. Every bag we make is 100% organic, BPA-free, and easy to decompose — without compromising on strength or usability.
+          </p>
+          <p style={{fontSize:14,color:'#666',maxWidth:680,lineHeight:1.85,padding:'14px 18px',background:'#f8fcf2',borderLeft:'3px solid var(--green-mid)',borderRadius:'0 10px 10px 0'}}>
+            <strong>RDN Bio Products LLP</strong> (LLPIN: ACI-9987) is a biodegradable packaging manufacturer incorporated on 16 August 2024 under the Ministry of Corporate Affairs, Government of India, in Hyderabad, Telangana. We manufacture D-Cut carry bags (7 sizes), U/W-Cut carry bags (14 sizes), garbage bags (8 sizes), food pouches (4 sizes), grocery bags (8 sizes), butter covers (2 sizes), and PBAT bio compound granules — using DRDO-certified technology. Our products are BPA-free, non-toxic, 100% organic, and fully compliant with India's Plastic Waste Management Rules. We supply retail stores, kirana shops, supermarkets, hospitals, restaurants, temples, cloud kitchens, and institutions across India.
           </p>
         </div>
       </section>
