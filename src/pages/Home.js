@@ -24,27 +24,14 @@ const faqSchema = {
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
-const tickerItems = [
-  '🌿 100% Biodegradable & DRDO Certified',
-  '♻️ Easy Decomposable — Earth Friendly',
-  '🛡️ BPA Free & Non-Toxic',
-  '📦 Bulk Orders Welcome — Pan India Delivery',
-  '🎨 Custom Sizes & Brand Printing Available',
-  '⚡ WhatsApp Response within 1 Hour',
-  '🏪 Trusted by Kirana Stores, Hospitals & Temples',
-  '💰 Competitive Pricing for All Order Sizes',
-  '🌱 Made from Plant-Based PBAT Material',
-  '✅ Government & Institution Approved',
-];
-
-const scrollProducts = [
-  { name: 'D-Cut Bags',    desc: '7 size variants',  photo: 'dcut-bag.png'     },
-  { name: 'Garbage Bags',  desc: '8 size variants',  photo: 'garbage-bag.png'  },
-  { name: 'U/W-Cut Bags',  desc: '14 size variants', photo: 'ucut-bag.png'     },
-  { name: 'Pouches',       desc: 'Multiple sizes',   photo: 'pouches-bag.png'  },
-  { name: 'Butter Covers', desc: '2 sizes',          photo: 'butter-bag.png'   },
-  { name: 'Bio Granules',  desc: 'PBAT fillers',     photo: 'granules.png'     },
-  { name: 'Grocery Bags',  desc: '8 size variants',  photo: 'pouches2-bag.png' },
+const productRange = [
+  { name: 'D-Cut Bags',    desc: '7 sizes · 35–45 microns',  use: 'Retail & kirana stores',          photo: 'dcut-bag.png',    badge: '7 sizes'  },
+  { name: 'U/W-Cut Bags',  desc: '14 sizes · 30–50 microns', use: 'Grocery, hospitals, supermarkets', photo: 'ucut-bag.png',    badge: '14 sizes' },
+  { name: 'Garbage Bags',  desc: '8 sizes · up to 18 kg',    use: 'Offices, hotels, municipalities',  photo: 'garbage-bag.png', badge: '8 sizes'  },
+  { name: 'Pouches',       desc: '4 sizes · 35–40 microns',  use: 'Food, spices, packaging',          photo: 'pouches-bag.png', badge: '4 sizes'  },
+  { name: 'Grocery Bags',  desc: '8 sizes · 30–45 microns',  use: 'Supermarkets & wet markets',       photo: 'pouches2-bag.png',badge: '8 sizes'  },
+  { name: 'Butter Covers', desc: '2 sizes · 30 microns',     use: 'Dairy & food industry',            photo: 'butter-bag.png',  badge: '2 sizes'  },
+  { name: 'Bio Granules',  desc: 'PBAT fillers · bulk',      use: 'Raw material for manufacturers',   photo: 'granules.png',    badge: 'PBAT'     },
 ];
 
 const customers = ['Kirana stores','Supermarkets','Hospitals & clinics','Restaurants & hotels','Temples','Government & institutions','Individual buyers'];
@@ -137,15 +124,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ticker */}
-      <div className="ticker-wrap">
-        <div className="ticker-track">
-          {[...tickerItems, ...tickerItems].map((item, i) => (
-            <span key={i} className="ticker-item">{item}</span>
-          ))}
-        </div>
-      </div>
-
       {/* Stats bar */}
       <section style={{background:'var(--green-dark)',padding:'36px 0'}}>
         <div className="container">
@@ -168,27 +146,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Scrolling product strip */}
-      <section style={{padding:'40px 0 36px',borderBottom:'1px solid #f0f5e8',overflow:'hidden'}}>
-        <div className="container" style={{marginBottom:20}}>
+      {/* Product range — static grid */}
+      <section style={{padding:'56px 0',borderBottom:'1px solid #f0f5e8'}}>
+        <div className="container">
           <h2 className="section-title" style={{textAlign:'center'}}>Our product range</h2>
-          <p className="section-sub" style={{textAlign:'center',marginBottom:0}}>Tap any card to explore full specs</p>
-        </div>
-        <div className="pscroll-wrap">
-          <div className="pscroll-track">
-            {[...scrollProducts, ...scrollProducts].map((p, i) => (
-              <Link to="/products" key={i} className="pscroll-card">
-                <div className="pscroll-img">
-                  <img src={p.photo} alt={p.name} loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain',padding:4}}/>
+          <p className="section-sub" style={{textAlign:'center'}}>100% organic · BPA free · DRDO certified · Custom sizes available</p>
+          <div className="home-products-grid">
+            {productRange.map(p => (
+              <Link to="/products" key={p.name} className="home-product-card">
+                <div className="home-product-img">
+                  <img src={p.photo} alt={p.name} loading="lazy" style={{width:'100%',height:'100%',objectFit:'contain'}} />
+                  <span className="home-product-badge">{p.badge}</span>
                 </div>
-                <div className="pscroll-name">{p.name}</div>
-                <div className="pscroll-desc">{p.desc}</div>
+                <div className="home-product-body">
+                  <div className="home-product-name">{p.name}</div>
+                  <div className="home-product-desc">{p.desc}</div>
+                  <div className="home-product-use">{p.use}</div>
+                </div>
               </Link>
             ))}
           </div>
-        </div>
-        <div style={{textAlign:'center',marginTop:20}}>
-          <Link to="/products" className="btn-outline">View all products with full specs →</Link>
+          <div style={{textAlign:'center',marginTop:32}}>
+            <Link to="/products" className="btn-outline">View full specs & sizes →</Link>
+          </div>
         </div>
       </section>
 
