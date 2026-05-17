@@ -16,6 +16,7 @@ import CarryBags from './pages/CarryBags';
 import ButterSheets from './pages/ButterSheets';
 import RetailPackaging from './pages/RetailPackaging';
 import NotFound from './pages/NotFound';
+import GetQuote from './pages/GetQuote';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -100,6 +101,7 @@ function Navbar() {
         <NavLink to="/customisation" onClick={close}>Customise</NavLink>
         <NavLink to="/about" onClick={close}>About</NavLink>
         <NavLink to="/contact" onClick={close}>Contact</NavLink>
+        <NavLink to="/get-quote" onClick={close} style={{ background: '#f57c00', color: '#fff', fontWeight: 700 }}>📩 Get a Bulk Quote</NavLink>
         <a href="tel:+917301222666" onClick={close} style={{ color: '#ffd54f' }}>📞 Call +91-7301222666</a>
         <a href={WA_LINK} target="_blank" rel="noreferrer" onClick={close}>💬 WhatsApp us</a>
       </div>
@@ -217,6 +219,7 @@ export default function App() {
         <Route path="/biodegradable-carry-bags" element={<CarryBags />} />
         <Route path="/butter-sheets-food-wrapping" element={<ButterSheets />} />
         <Route path="/retail-packaging-solutions" element={<RetailPackaging />} />
+        <Route path="/get-quote" element={<GetQuote />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
