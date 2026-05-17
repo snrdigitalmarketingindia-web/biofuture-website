@@ -7,6 +7,8 @@ import About from './pages/About';
 import Customisation from './pages/Customisation';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
+import { BlogIndex, BlogPost } from './pages/Blog';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27m%20interested%20in%20BioFuture%20products";
 
@@ -24,6 +26,7 @@ function Navbar() {
         <ul className="nav-links">
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/products">Products</NavLink></li>
+          <li><NavLink to="/blog">Blog</NavLink></li>
           <li><NavLink to="/gallery">Gallery</NavLink></li>
           <li><NavLink to="/customisation">Customise</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
@@ -42,6 +45,7 @@ function Navbar() {
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         <NavLink to="/" onClick={close}>Home</NavLink>
         <NavLink to="/products" onClick={close}>Products</NavLink>
+        <NavLink to="/blog" onClick={close}>Blog</NavLink>
         <NavLink to="/gallery" onClick={close}>Gallery</NavLink>
         <NavLink to="/customisation" onClick={close}>Customise</NavLink>
         <NavLink to="/about" onClick={close}>About</NavLink>
@@ -76,9 +80,16 @@ function Footer() {
               WhatsApp us
             </a>
           </div>
+          <div>
+            <h4>Resources</h4>
+            <p><a href="#/blog" style={{color:'rgba(255,255,255,0.75)'}}>Blog</a></p>
+            <p><a href="#/faq" style={{color:'rgba(255,255,255,0.75)'}}>FAQ</a></p>
+            <p><a href="#/gallery" style={{color:'rgba(255,255,255,0.75)'}}>Gallery</a></p>
+            <p><a href="#/customisation" style={{color:'rgba(255,255,255,0.75)'}}>Customise</a></p>
+          </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 RDN Bio Products LLP</span>
+          <span>© 2026 RDN Bio Products LLP</span>
           <span>I am NOT Plastic 🌿</span>
         </div>
       </div>
@@ -106,6 +117,9 @@ export default function App() {
         <Route path="/customisation" element={<Customisation />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
       <Footer />
       <FloatingWA />

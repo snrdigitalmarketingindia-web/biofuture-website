@@ -256,6 +256,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Local SEO — Areas served */}
+      <section style={{padding:'40px 0',background:'var(--green-pale)',borderBottom:'1px solid #d4e8b0'}}>
+        <div className="container">
+          <h2 className="section-title">Biodegradable bags delivered across Hyderabad &amp; India</h2>
+          <p style={{fontSize:14,color:'#666',marginBottom:20,lineHeight:1.7}}>
+            RDN Bio Products LLP is based in <strong>Karmanghat, Saroornagar, Hyderabad (500035)</strong> — manufacturing and supplying DRDO certified biodegradable bags to businesses across Hyderabad, Telangana, and pan India.
+          </p>
+          <div style={{display:'flex',flexWrap:'wrap',gap:8,marginBottom:16}}>
+            {['Karmanghat','Saroornagar','LB Nagar','Dilsukhnagar','Uppal','Secunderabad','Kukatpally','Begumpet','Madhapur','Miyapur','Mehdipatnam','Tolichowki','Ameerpet','Himayatnagar','ECIL','Nacharam','Moosapet'].map(area => (
+              <span key={area} className="pill" style={{fontSize:12}}>{area}</span>
+            ))}
+          </div>
+          <p style={{fontSize:13,color:'#888'}}>
+            Also supplying across <strong>Andhra Pradesh, Tamil Nadu, Karnataka, Maharashtra, Delhi NCR</strong> and all states pan India via courier and transport.
+          </p>
+        </div>
+      </section>
+
       {/* Enquiry form */}
       <section id="enquiry" style={{padding:'56px 0'}}>
         <div className="container">
