@@ -1,24 +1,36 @@
 """
-Bing URL Indexing — RDN Bio Products (rdnbio.com)
---------------------------------------------------
-Reads public/sitemap.xml, prioritises pages with today's <lastmod>,
-then submits up to 100 URLs per run via the Bing Webmaster API.
+URL Indexing — RDN Bio Products (rdnbio.com)
+--------------------------------------------
+Submits URLs via TWO channels on every push:
 
-Requires env var BING_API_KEY (stored as GitHub secret).
+  1. IndexNow  → notifies Bing, Yandex, Seznam, Naver in one call (no auth needed)
+  2. Bing Webmaster API → direct Bing submission (requires BING_API_KEY secret)
+
+Reads public/sitemap.xml, prioritises pages with today's <lastmod>,
+then submits up to 100 URLs per run.
 """
 
 import os
 import sys
 import xml.etree.ElementTree as ET
-from datetime import date, datetime, timezone
+from datetime import date
 import requests
 
 # ── Config ────────────────────────────────────────────────────────────────────
-SITE_URL       = "https://rdnbio.com/"
-SITEMAP_PATH   = "public/sitemap.xml"      # relative to repo root
-BING_API_URL   = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch"
-DAILY_QUOTA    = 100                        # Bing free tier limit
+SITE_URL          = "https://rdnbio.com/"
+SITE_HOST         = "rdnbio.com"
+SITEMAP_PATH      = "public/sitemap.xml"
+DAILY_QUOTA       = 100
+
+# IndexNow — covers Bing, Yandex, Seznam, Naver
+INDEXNOW_KEY      = "451f061269a14230a4740a63bb450dde"
+INDEXNOW_URL      = "https://api.indexnow.org/indexnow"
+INDEXNOW_KEY_LOC  = f"https://{SITE_HOST}/{INDEXNOW_KEY}.txt"
+
+# Bing Webmaster API (direct)
+BING_API_URL      = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch"
 # ─────────────────────────────────────────────────────────────────────────────
+
 
 def load_urls(sitemap_path: str) -> list[dict]:
     """Parse sitemap and return list of {url, lastmod, priority}."""
@@ -40,55 +52,87 @@ def prioritise(urls: list[dict]) -> list[str]:
       2. All others by priority desc, then alphabetical
     Returns plain URL strings, capped at DAILY_QUOTA.
     """
-    today_str = date.today().isoformat()          # e.g. "2026-06-10"
+    today_str = date.today().isoformat()
     today   = [u for u in urls if u["lastmod"] == today_str]
     rest    = [u for u in urls if u["lastmod"] != today_str]
-
     today.sort(key=lambda u: (-u["priority"], u["url"]))
     rest.sort( key=lambda u: (-u["priority"], u["url"]))
-
     ordered = today + rest
     return [u["url"] for u in ordered[:DAILY_QUOTA]]
 
 
-def submit_to_bing(api_key: str, urls: list[str]) -> None:
-    """POST URL batch to Bing Webmaster API."""
+def submit_indexnow(urls: list[str]) -> bool:
+    """
+    POST to IndexNow — notifies Bing, Yandex, Seznam, Naver simultaneously.
+    Returns True on success.
+    """
     payload = {
-        "siteUrl":  SITE_URL,
-        "urlList":  urls,
+        "host":        SITE_HOST,
+        "key":         INDEXNOW_KEY,
+        "keyLocation": INDEXNOW_KEY_LOC,
+        "urlList":     urls,
     }
+    headers = {"Content-Type": "application/json; charset=utf-8"}
+    print(f"\n📡 IndexNow — submitting {len(urls)} URL(s) to Bing + Yandex + more …")
+    resp = requests.post(INDEXNOW_URL, json=payload, headers=headers, timeout=30)
+
+    # IndexNow returns 200 or 202 on success
+    if resp.status_code in (200, 202):
+        print(f"✅  IndexNow accepted {len(urls)} URL(s)  [HTTP {resp.status_code}]")
+        print(f"   Engines notified: Bing, Yandex, Seznam, Naver")
+        return True
+    else:
+        print(f"⚠️  IndexNow HTTP {resp.status_code}: {resp.text}", file=sys.stderr)
+        return False
+
+
+def submit_bing(api_key: str, urls: list[str]) -> bool:
+    """
+    POST directly to Bing Webmaster API.
+    Returns True on success.
+    """
+    payload = {"siteUrl": SITE_URL, "urlList": urls}
     params  = {"apikey": api_key}
     headers = {"Content-Type": "application/json; charset=utf-8"}
 
-    print(f"Submitting {len(urls)} URL(s) to Bing …")
+    print(f"\n🔵 Bing Webmaster API — submitting {len(urls)} URL(s) …")
     resp = requests.post(BING_API_URL, json=payload, params=params, headers=headers, timeout=30)
 
     if resp.status_code == 200:
-        data = resp.json()
-        # Bing returns {"d": null} on success or {"d": {"ErrorCode": ...}} on error
-        d = data.get("d")
+        d = resp.json().get("d")
         if d and d.get("ErrorCode", 0) != 0:
             print(f"⚠️  Bing API error: {d}", file=sys.stderr)
-            sys.exit(1)
-        print(f"✅  Bing accepted {len(urls)} URL(s).")
-        for u in urls:
-            print(f"   → {u}")
+            return False
+        print(f"✅  Bing API accepted {len(urls)} URL(s).")
+        return True
     else:
-        print(f"❌  HTTP {resp.status_code}: {resp.text}", file=sys.stderr)
-        sys.exit(1)
+        print(f"⚠️  Bing API HTTP {resp.status_code}: {resp.text}", file=sys.stderr)
+        return False
 
 
 def main():
-    api_key = os.environ.get("BING_API_KEY", "").strip()
-    if not api_key:
-        print("❌  BING_API_KEY env var is not set.", file=sys.stderr)
-        sys.exit(1)
-
     urls     = load_urls(SITEMAP_PATH)
     to_send  = prioritise(urls)
+    print(f"Sitemap: {len(urls)} URLs → sending {len(to_send)} (quota={DAILY_QUOTA})")
 
-    print(f"Sitemap has {len(urls)} URLs; sending {len(to_send)} (quota={DAILY_QUOTA}).")
-    submit_to_bing(api_key, to_send)
+    success = True
+
+    # 1. IndexNow (Bing + Yandex + more) — always runs, no secret needed
+    success &= submit_indexnow(to_send)
+
+    # 2. Bing direct API — runs only if BING_API_KEY is set
+    bing_key = os.environ.get("BING_API_KEY", "").strip()
+    if bing_key:
+        success &= submit_bing(bing_key, to_send)
+    else:
+        print("\n⚠️  BING_API_KEY not set — skipping Bing direct submission.")
+
+    if not success:
+        sys.exit(1)
+
+    print(f"\n🎉 Done — {len(to_send)} URLs submitted to all engines.")
+    for u in to_send:
+        print(f"   → {u}")
 
 
 if __name__ == "__main__":
