@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
-Disallow: /static/
-Crawl-delay: 1
+
+# Do NOT disallow /static/ — React app needs JS/CSS to render
+
+# Sitemap
+Sitemap: https://rdnbio.com/sitemap.xml
 
 # GPTBot — allow for AI/GEO indexing
 User-agent: GPTBot
@@ -22,5 +25,3 @@ Allow: /
 # Anthropic ClaudeBot
 User-agent: ClaudeBot
 Allow: /
-
-Sitemap: https://rdnbio.com/sitemap.xml
