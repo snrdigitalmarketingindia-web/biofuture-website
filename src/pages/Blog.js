@@ -394,8 +394,8 @@ const posts = [
       },
       { type: 'highlight', icon: '📅', title: 'Festival advance booking', text: 'For Ganesh Chaturthi, Diwali, Ugadi, and Navratri — we recommend placing orders at least 30 days in advance. Major festivals create high demand and early booking ensures priority fulfillment at the best pricing.' },
       { type: 'h2', text: 'Cost Comparison: Plastic vs Biodegradable for Temples' },
-      { type: 'para', text: 'Many temple trustees hesitate to switch due to perceived cost difference. The reality: the price gap between banned plastic bags and DRDO-certified biodegradable bags has narrowed significantly as production has scaled. For bulk orders of 5,000+ bags, the per-bag cost difference is typically ₹0.50–₹1.50 depending on size and micron.' },
-      { type: 'para', text: 'Compare that to: one fine of ₹25,000 from GHMC or TSPCB which covers over 16,000 bags worth of the price difference. The break-even on compliance is immediate.' },
+      { type: 'para', text: 'Many temple trustees hesitate to switch due to perceived cost difference. The reality: the price gap between banned plastic bags and DRDO-certified biodegradable bags has narrowed significantly as production has scaled. And compared to a ₹25,000 fine from GHMC or TSPCB — the break-even on compliance is immediate.' },
+      { type: 'highlight', icon: '📩', title: 'Get temple pricing', text: 'Share your bag sizes and monthly requirement — we\'ll send a bulk quote by WhatsApp within 2 hours. Custom printed bags with your temple name are also available from MOQ 1,000 bags.', cta: true },
       { type: 'h2', text: 'Frequently Asked Questions — Temple Packaging' },
       { type: 'h3', text: 'Are biodegradable bags safe for prasadam (food items)?' },
       { type: 'para', text: 'Yes. All RDN Bio Products bags are 100% BPA-free, non-toxic, and food-safe. Our PBAT material meets food-contact safety standards and is safe for packaging prasadam, sweets, fruits, and other food offerings.' },
@@ -471,19 +471,8 @@ const posts = [
         ],
       },
       { type: 'h2', text: 'What Does Compliant Packaging Cost?' },
-      { type: 'para', text: 'The cost difference between conventional plastic bags and DRDO-certified biodegradable bags has narrowed significantly as manufacturing has scaled. For a medium-sized restaurant ordering 1,000 carry bags per month, the monthly cost difference is typically ₹500–₹1,500 depending on bag size and micron thickness.' },
-      {
-        type: 'table',
-        headers: ['Order volume / month', 'Approx. cost per bag (biodegradable)', 'Monthly additional cost vs plastic'],
-        rows: [
-          ['500 bags', '₹3.50–5.00', '₹250–600'],
-          ['1,000 bags', '₹2.50–3.50', '₹400–900'],
-          ['5,000 bags', '₹1.80–2.50', '₹1,200–2,500'],
-          ['10,000+ bags', '₹1.50–2.00', '₹2,000–4,000'],
-        ],
-      },
-      { type: 'para', text: 'Compare this to the risk: a single municipal inspection fine starts at ₹25,000. The break-even on switching is immediate. Most restaurants recover the cost difference simply by charging customers ₹1–2 per bag — which customers increasingly expect and accept.' },
-      { type: 'highlight', icon: '💡', title: 'Margin protection tip', text: 'Charge customers ₹2 per bag. Most customers accept this gladly, especially if the bag is branded with your restaurant name. This fully covers the cost of switching to biodegradable — often with margin left over.' },
+      { type: 'para', text: 'The cost difference between conventional plastic bags and DRDO-certified biodegradable bags has narrowed significantly as manufacturing has scaled. Pricing depends on bag type, size, and order volume — bulk orders attract better rates.' },
+      { type: 'highlight', icon: '💡', title: 'Get a quote for your restaurant', text: 'Send us your bag sizes and monthly volume on WhatsApp — we\'ll send a pricing quote within 2 hours. Most restaurants are surprised by how affordable the switch is, especially when weighed against the risk of a ₹25,000 fine from a single inspection.', cta: true },
       { type: 'h2', text: 'How to Transition Without Disrupting Operations' },
       {
         type: 'ul',
@@ -612,17 +601,9 @@ const posts = [
           'Multi-location delivery available for companies with offices in multiple cities',
         ],
       },
-      { type: 'h2', text: 'Cost Comparison: Biodegradable vs Conventional Plastic' },
-      {
-        type: 'table',
-        headers: ['Item', 'Conventional plastic (approx.)', 'Biodegradable PBAT (approx.)', 'Monthly cost difference'],
-        rows: [
-          ['Workstation bin liners (500/month)', '₹200–300', '₹350–500', '+₹150–200'],
-          ['Canteen carry bags (1,000/month)', '₹600–800', '₹1,000–1,400', '+₹400–600'],
-          ['Total monthly premium', '—', '—', '₹550–800'],
-        ],
-      },
-      { type: 'para', text: 'For a 500-employee office, the monthly premium for going fully plastic-free in the canteen is typically ₹600–900 — less than ₹2 per employee per month. This is often absorbed into canteen operating costs or offset by a nominal per-bag charge at the counter.' },
+      { type: 'h2', text: 'Cost of Switching: Lower Than You Think' },
+      { type: 'para', text: 'The cost difference between conventional plastic and DRDO-certified biodegradable bags has narrowed significantly as Indian PBAT manufacturing has scaled. For most corporate campuses, the monthly premium is modest — and often offset by ESG/CSR reporting value and reduced compliance risk.' },
+      { type: 'highlight', icon: '📩', title: 'Get a corporate supply quote', text: 'Tell us your approximate monthly requirement for canteen bags and bin liners — we\'ll send a volume-based quote within 2 hours. Standing monthly supply agreements available with priority fulfillment.', cta: true },
       { type: 'highlight', icon: '♻️', title: 'CSR reporting value', text: 'Switching to certified biodegradable packaging gives your sustainability team quantifiable data for ESG and CSR reports: kilograms of plastic avoided, number of biodegradable bags used, percentage of canteen packaging that is plastic-free. This counts toward your company\'s environmental impact metrics.' },
       { type: 'h2', text: 'Frequently Asked Questions — Corporate Canteens' },
       { type: 'h3', text: 'Do biodegradable bin liners fit standard office waste bins?' },
@@ -689,16 +670,8 @@ const posts = [
       },
       { type: 'highlight', icon: '💡', title: 'Key insight', text: 'PBAT bags degrade under composting conditions — which require moisture, microbes, and warmth together. In normal dry storage, they remain stable. You do not need to rush to use them; they store as well as conventional plastic bags.' },
       { type: 'h2', text: 'Cost Comparison and Bulk Pricing' },
-      { type: 'para', text: 'PBAT bags cost slightly more per unit than conventional plastic at equivalent micron thickness. However, the cost gap has narrowed significantly as Indian PBAT manufacturing has scaled. Key cost considerations:' },
-      {
-        type: 'ul',
-        items: [
-          'At 1,000 bags/month: PBAT typically costs ₹0.80–1.50 more per bag than equivalent plastic',
-          'At 5,000 bags/month: The premium falls to ₹0.50–1.00 per bag',
-          'At 10,000+ bags/month: Bulk discounts can narrow the gap to ₹0.30–0.70 per bag',
-          'Compare to penalty risk: A single government fine of ₹25,000 covers the premium cost of 25,000–80,000 bags',
-        ],
-      },
+      { type: 'para', text: 'PBAT bags cost slightly more per unit than conventional plastic at equivalent micron thickness. However, the cost gap has narrowed significantly as Indian PBAT manufacturing has scaled. And the higher the volume, the better the rate — bulk orders attract meaningful discounts.' },
+      { type: 'highlight', icon: '📩', title: 'Get a bulk pricing quote', text: 'Send us your bag type, size, and monthly quantity on WhatsApp — we\'ll reply with pricing within 2 hours. No commitment required to get a quote.', cta: true },
       { type: 'h2', text: 'DRDO Certification Explained' },
       { type: 'para', text: 'DRDO (Defence Research and Development Organisation) certification is the gold standard for PBAT product validation in India. It confirms:' },
       {
@@ -1107,9 +1080,20 @@ function renderSection(section, i) {
       return (
         <div key={i} className="article-highlight">
           <div className="article-highlight-icon">{section.icon}</div>
-          <div>
+          <div style={{ flex: 1 }}>
             <div className="article-highlight-title">{section.title}</div>
             <div className="article-highlight-text">{section.text}</div>
+            {section.cta && (
+              <a
+                href="https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20biodegradable%20bags%20pricing%20and%20availability"
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 12, background: '#25d366', color: '#fff', padding: '8px 16px', borderRadius: 8, fontSize: 13, fontWeight: 700, textDecoration: 'none' }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.428a.5.5 0 0 0 .609.61l5.65-1.48A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.857a9.833 9.833 0 0 1-5.021-1.374l-.36-.214-3.733.979.997-3.645-.235-.374A9.818 9.818 0 0 1 2.143 12C2.143 6.55 6.55 2.143 12 2.143c5.45 0 9.857 4.407 9.857 9.857 0 5.45-4.407 9.857-9.857 9.857z"/></svg>
+                Send Enquiry on WhatsApp
+              </a>
+            )}
           </div>
         </div>
       );
