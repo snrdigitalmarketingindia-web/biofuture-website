@@ -176,7 +176,7 @@ export default function CityPage({ data }) {
             {data.name} businesses — get a bulk pricing quote
           </h2>
           <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.85)', marginBottom: 32, maxWidth: 540, margin: '0 auto 32px' }}>
-            DRDO certified, {data.state} ban-compliant biodegradable bags dispatched same-day from Hyderabad. {data.deliveryDays} day delivery across {data.name}.
+            DRDO certified, {data.state} ban-compliant biodegradable bags dispatched from our Hyderabad factory. Delivery to {data.name} subject to stock availability.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={waUrl} target="_blank" rel="noreferrer" className="btn-wa" style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '14px 28px', fontSize: 15, fontWeight: 700 }}>
@@ -204,7 +204,7 @@ export default function CityPage({ data }) {
             <div style={{ background: '#fff', border: '1px solid #d4e8b0', borderRadius: 14, padding: '20px 24px', fontSize: 14, color: '#555', lineHeight: 1.75, textAlign: 'center' }}>
               <strong style={{ color: 'var(--green-dark)' }}>RDN Bio Products LLP</strong> — Direct Manufacturer, Hyderabad<br />
               DRDO Certified · BPA-Free PBAT · Pan India Supply<br />
-              {data.deliveryDays} day delivery to {data.name} · Same-day dispatch on confirmed orders
+              Fast delivery to {data.name} · Dispatch subject to stock availability
             </div>
             <Link to="/contact" style={{ color: 'var(--green-mid)', fontWeight: 600, fontSize: 14, textAlign: 'center' }}>View full contact details →</Link>
           </div>
