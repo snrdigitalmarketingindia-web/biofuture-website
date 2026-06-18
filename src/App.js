@@ -24,6 +24,22 @@ import CityHyderabad from './pages/CityHyderabad';
 import CityChennai from './pages/CityChennai';
 import CityBangalore from './pages/CityBangalore';
 import CityMumbai from './pages/CityMumbai';
+import CityDelhi from './pages/CityDelhi';
+import CityPune from './pages/CityPune';
+import CityAhmedabad from './pages/CityAhmedabad';
+import CityKolkata from './pages/CityKolkata';
+import CityCoimbatore from './pages/CityCoimbatore';
+import CitySurat from './pages/CitySurat';
+import IndustryHotels from './pages/IndustryHotels';
+import IndustrySchools from './pages/IndustrySchools';
+import IndustryCatering from './pages/IndustryCatering';
+import IndustryEcommerce from './pages/IndustryEcommerce';
+import IndustryPharma from './pages/IndustryPharma';
+import GeoPlasticBan from './pages/GeoPlasticBan';
+import GeoBioVsCompostable from './pages/GeoBioVsCompostable';
+import GeoOEMPrivateLabel from './pages/GeoOEMPrivateLabel';
+import GeoBulkOrder from './pages/GeoBulkOrder';
+import GeoManufacturing from './pages/GeoManufacturing';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -184,10 +200,11 @@ function Footer() {
             <h4>Resources</h4>
             <p><a href="#/blog" style={{ color: 'rgba(255,255,255,0.75)' }}>Blog</a></p>
             <p><a href="#/faq" style={{ color: 'rgba(255,255,255,0.75)' }}>FAQ</a></p>
-            <p><a href="#/gallery" style={{ color: 'rgba(255,255,255,0.75)' }}>Gallery</a></p>
-            <p><a href="#/customisation" style={{ color: 'rgba(255,255,255,0.75)' }}>Customise</a></p>
-            <p><a href="#/about" style={{ color: 'rgba(255,255,255,0.75)' }}>About Us</a></p>
-            <p><a href="#/products" style={{ color: 'rgba(255,255,255,0.75)' }}>All Products</a></p>
+            <p><a href="#/plastic-ban-compliance-india" style={{ color: 'rgba(255,255,255,0.75)' }}>📋 Plastic Ban Guide</a></p>
+            <p><a href="#/biodegradable-vs-compostable" style={{ color: 'rgba(255,255,255,0.75)' }}>🔬 Bio vs Compostable</a></p>
+            <p><a href="#/bulk-order-biodegradable-bags" style={{ color: 'rgba(255,255,255,0.75)' }}>📦 Bulk Order Guide</a></p>
+            <p><a href="#/oem-private-label-biodegradable-bags" style={{ color: 'rgba(255,255,255,0.75)' }}>🖨️ OEM / Private Label</a></p>
+            <p><a href="#/manufacturing-process" style={{ color: 'rgba(255,255,255,0.75)' }}>🏭 Manufacturing</a></p>
             <p><a href="#/sustainability" style={{ color: '#a8e06b', fontWeight: 600 }}>🌍 Sustainability</a></p>
             <p><a href="#/distributor" style={{ color: '#a8e06b', fontWeight: 600 }}>🤝 Become a Distributor</a></p>
             <p><a href="#/export-packaging-solutions" style={{ color: 'rgba(255,255,255,0.75)' }}>🌏 Export Solutions</a></p>
@@ -200,7 +217,12 @@ function Footer() {
             <p><a href="#/biodegradable-bags-chennai" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Chennai</a></p>
             <p><a href="#/biodegradable-bags-bangalore" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Bangalore</a></p>
             <p><a href="#/biodegradable-bags-mumbai" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Mumbai</a></p>
-            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginTop: 8 }}>+ all India — Delhi NCR, Kolkata,<br />Pune, Coimbatore & more</p>
+            <p><a href="#/biodegradable-bags-delhi" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Delhi NCR</a></p>
+            <p><a href="#/biodegradable-bags-pune" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Pune</a></p>
+            <p><a href="#/biodegradable-bags-ahmedabad" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Ahmedabad</a></p>
+            <p><a href="#/biodegradable-bags-kolkata" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Kolkata</a></p>
+            <p><a href="#/biodegradable-bags-coimbatore" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Coimbatore</a></p>
+            <p><a href="#/biodegradable-bags-surat" style={{ color: 'rgba(255,255,255,0.75)' }}>📍 Surat</a></p>
           </div>
         </div>
 
@@ -265,10 +287,30 @@ export default function App() {
         <Route path="/export-packaging-solutions" element={<ExportPackaging />} />
         <Route path="/sustainability" element={<Sustainability />} />
         {/* City SEO landing pages */}
+        {/* City SEO pages — existing */}
         <Route path="/biodegradable-bags-hyderabad" element={<CityHyderabad />} />
         <Route path="/biodegradable-bags-chennai" element={<CityChennai />} />
         <Route path="/biodegradable-bags-bangalore" element={<CityBangalore />} />
         <Route path="/biodegradable-bags-mumbai" element={<CityMumbai />} />
+        {/* City SEO pages — new */}
+        <Route path="/biodegradable-bags-delhi" element={<CityDelhi />} />
+        <Route path="/biodegradable-bags-pune" element={<CityPune />} />
+        <Route path="/biodegradable-bags-ahmedabad" element={<CityAhmedabad />} />
+        <Route path="/biodegradable-bags-kolkata" element={<CityKolkata />} />
+        <Route path="/biodegradable-bags-coimbatore" element={<CityCoimbatore />} />
+        <Route path="/biodegradable-bags-surat" element={<CitySurat />} />
+        {/* Industry landing pages — new */}
+        <Route path="/biodegradable-bags-hotels-resorts" element={<IndustryHotels />} />
+        <Route path="/biodegradable-bags-schools-colleges" element={<IndustrySchools />} />
+        <Route path="/biodegradable-bags-catering-services" element={<IndustryCatering />} />
+        <Route path="/biodegradable-ecommerce-packaging" element={<IndustryEcommerce />} />
+        <Route path="/biodegradable-pharma-packaging" element={<IndustryPharma />} />
+        {/* GEO / AI answer pages */}
+        <Route path="/plastic-ban-compliance-india" element={<GeoPlasticBan />} />
+        <Route path="/biodegradable-vs-compostable" element={<GeoBioVsCompostable />} />
+        <Route path="/oem-private-label-biodegradable-bags" element={<GeoOEMPrivateLabel />} />
+        <Route path="/bulk-order-biodegradable-bags" element={<GeoBulkOrder />} />
+        <Route path="/manufacturing-process" element={<GeoManufacturing />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
