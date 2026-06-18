@@ -40,6 +40,7 @@ import GeoBioVsCompostable from './pages/GeoBioVsCompostable';
 import GeoOEMPrivateLabel from './pages/GeoOEMPrivateLabel';
 import GeoBulkOrder from './pages/GeoBulkOrder';
 import GeoManufacturing from './pages/GeoManufacturing';
+import ManufacturerHyderabad from './pages/ManufacturerHyderabad';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -286,6 +287,8 @@ export default function App() {
         <Route path="/distributor" element={<Distributor />} />
         <Route path="/export-packaging-solutions" element={<ExportPackaging />} />
         <Route path="/sustainability" element={<Sustainability />} />
+        {/* Manufacturer-intent Hyderabad page */}
+        <Route path="/biodegradable-bags-manufacturer-hyderabad" element={<ManufacturerHyderabad />} />
         {/* City SEO landing pages */}
         {/* City SEO pages — existing */}
         <Route path="/biodegradable-bags-hyderabad" element={<CityHyderabad />} />
