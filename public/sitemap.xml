@@ -339,4 +339,112 @@
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
+
+  <!-- Phase 8: High plastic-consuming sector pages -->
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-sweet-shops</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-vegetable-market</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-dhabas-street-food</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-fish-meat-market</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-pharmacy-chemist</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-supermarkets</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-weddings-events</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-bakery</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-government-municipal</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Phase 8: Telangana/AP city pages -->
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-tirupati</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-vijayawada</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-warangal</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-vizag</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Phase 8: Hyderabad locality pages -->
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-kukatpally</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-secunderabad</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-lb-nagar</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/biodegradable-bags-dilsukhnagar</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+  </url>
 </urlset>

@@ -41,6 +41,23 @@ import GeoOEMPrivateLabel from './pages/GeoOEMPrivateLabel';
 import GeoBulkOrder from './pages/GeoBulkOrder';
 import GeoManufacturing from './pages/GeoManufacturing';
 import ManufacturerHyderabad from './pages/ManufacturerHyderabad';
+import IndustrySweetShops from './pages/IndustrySweetShops';
+import IndustryVegMarket from './pages/IndustryVegMarket';
+import IndustryDhabas from './pages/IndustryDhabas';
+import IndustryFishMeat from './pages/IndustryFishMeat';
+import IndustryPharmacyChemist from './pages/IndustryPharmacyChemist';
+import IndustrySupermarkets from './pages/IndustrySupermarkets';
+import IndustryWeddings from './pages/IndustryWeddings';
+import IndustryBakeries from './pages/IndustryBakeries';
+import IndustryGovernment from './pages/IndustryGovernment';
+import CityTirupati from './pages/CityTirupati';
+import CityVijayawada from './pages/CityVijayawada';
+import CityWarangal from './pages/CityWarangal';
+import CityVizag from './pages/CityVizag';
+import CityKukatpally from './pages/CityKukatpally';
+import CitySecunderabad from './pages/CitySecunderabad';
+import CityLBNagar from './pages/CityLBNagar';
+import CityDilsukhnagar from './pages/CityDilsukhnagar';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -314,6 +331,30 @@ export default function App() {
         <Route path="/oem-private-label-biodegradable-bags" element={<GeoOEMPrivateLabel />} />
         <Route path="/bulk-order-biodegradable-bags" element={<GeoBulkOrder />} />
         <Route path="/manufacturing-process" element={<GeoManufacturing />} />
+
+        {/* Phase 8: High plastic-consuming sector pages */}
+        <Route path="/biodegradable-bags-sweet-shops" element={<IndustrySweetShops />} />
+        <Route path="/biodegradable-bags-vegetable-market" element={<IndustryVegMarket />} />
+        <Route path="/biodegradable-bags-dhabas-street-food" element={<IndustryDhabas />} />
+        <Route path="/biodegradable-bags-fish-meat-market" element={<IndustryFishMeat />} />
+        <Route path="/biodegradable-bags-pharmacy-chemist" element={<IndustryPharmacyChemist />} />
+        <Route path="/biodegradable-bags-supermarkets" element={<IndustrySupermarkets />} />
+        <Route path="/biodegradable-bags-weddings-events" element={<IndustryWeddings />} />
+        <Route path="/biodegradable-bags-bakery" element={<IndustryBakeries />} />
+        <Route path="/biodegradable-bags-government-municipal" element={<IndustryGovernment />} />
+
+        {/* Phase 8: Telangana/AP city pages */}
+        <Route path="/biodegradable-bags-tirupati" element={<CityTirupati />} />
+        <Route path="/biodegradable-bags-vijayawada" element={<CityVijayawada />} />
+        <Route path="/biodegradable-bags-warangal" element={<CityWarangal />} />
+        <Route path="/biodegradable-bags-vizag" element={<CityVizag />} />
+
+        {/* Phase 8: Hyderabad locality pages */}
+        <Route path="/biodegradable-bags-kukatpally" element={<CityKukatpally />} />
+        <Route path="/biodegradable-bags-secunderabad" element={<CitySecunderabad />} />
+        <Route path="/biodegradable-bags-lb-nagar" element={<CityLBNagar />} />
+        <Route path="/biodegradable-bags-dilsukhnagar" element={<CityDilsukhnagar />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
