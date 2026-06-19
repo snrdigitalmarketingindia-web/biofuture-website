@@ -211,6 +211,30 @@ export default function Distributor() {
       form.message ? `Message: ${form.message}` : null,
     ].filter(Boolean).join('\n');
 
+    const scriptUrl = process.env.REACT_APP_SCRIPT_URL;
+
+    // Save to Google Sheet via Apps Script (persistent admin dashboard storage)
+    if (scriptUrl) {
+      try {
+        await fetch(scriptUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            secret: process.env.REACT_APP_SCRIPT_SECRET || 'rdn2026secret',
+            Name: form.name,
+            Phone: form.phone,
+            Email: form.email || '',
+            City: form.city,
+            State: form.state,
+            'Business Type': form.businessType,
+            'Distribution Experience': form.experience,
+            'Target Monthly Volume': form.monthlyVolume,
+            Message: form.message || '',
+          }),
+        });
+      } catch (_) {}
+    }
+
     // Send email copy via Formsubmit (no account needed — verify email on first submission)
     try {
       await fetch('https://formsubmit.co/ajax/rdnbioproductsllp@gmail.com', {

@@ -69,6 +69,7 @@ import CityKukatpally from './pages/CityKukatpally';
 import CitySecunderabad from './pages/CitySecunderabad';
 import CityLBNagar from './pages/CityLBNagar';
 import CityDilsukhnagar from './pages/CityDilsukhnagar';
+import AdminPage from './pages/AdminPage';
 
 const WA_LINK = "https://wa.me/917301222666?text=Hi%2C%20I%27d%20like%20a%20bulk%20quote%20for%20biodegradable%20packaging%20from%20RDN%20Bio%20Products";
 const WA_SVG = (
@@ -379,6 +380,7 @@ export default function App() {
         <Route path="/biodegradable-bags-lb-nagar" element={<CityLBNagar />} />
         <Route path="/biodegradable-bags-dilsukhnagar" element={<CityDilsukhnagar />} />
 
+        <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
