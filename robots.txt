@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /#/admin
 
 # Do NOT disallow /static/ — React app needs JS/CSS to render
 
