@@ -41,6 +41,17 @@ import GeoOEMPrivateLabel from './pages/GeoOEMPrivateLabel';
 import GeoBulkOrder from './pages/GeoBulkOrder';
 import GeoManufacturing from './pages/GeoManufacturing';
 import ManufacturerHyderabad from './pages/ManufacturerHyderabad';
+import GeoDRDOCertification from './pages/GeoDRDOCertification';
+import GeoPBATvsOxo from './pages/GeoPBATvsOxo';
+import GeoPlasticBannedIndia from './pages/GeoPlasticBannedIndia';
+import GeoMicronGuide from './pages/GeoMicronGuide';
+import GeoDecomposeTime from './pages/GeoDecomposeTime';
+import GeoGHMCPlasticBan from './pages/GeoGHMCPlasticBan';
+import GeoTelanganaPlasticBan from './pages/GeoTelanganaPlasticBan';
+import GeoSpotFakeBiodegradable from './pages/GeoSpotFakeBiodegradable';
+import GeoEPRCompliance from './pages/GeoEPRCompliance';
+import GeoSwitchToEco from './pages/GeoSwitchToEco';
+import GeoCornstarchVsPBAT from './pages/GeoCornstarchVsPBAT';
 import IndustrySweetShops from './pages/IndustrySweetShops';
 import IndustryVegMarket from './pages/IndustryVegMarket';
 import IndustryDhabas from './pages/IndustryDhabas';
@@ -331,6 +342,19 @@ export default function App() {
         <Route path="/oem-private-label-biodegradable-bags" element={<GeoOEMPrivateLabel />} />
         <Route path="/bulk-order-biodegradable-bags" element={<GeoBulkOrder />} />
         <Route path="/manufacturing-process" element={<GeoManufacturing />} />
+
+        {/* Phase 9: GEO / AI search engine pages */}
+        <Route path="/what-is-drdo-certification-biodegradable-bags" element={<GeoDRDOCertification />} />
+        <Route path="/pbat-vs-oxo-degradable-plastic" element={<GeoPBATvsOxo />} />
+        <Route path="/plastic-bags-banned-india" element={<GeoPlasticBannedIndia />} />
+        <Route path="/biodegradable-bag-micron-guide" element={<GeoMicronGuide />} />
+        <Route path="/how-long-biodegradable-bags-decompose" element={<GeoDecomposeTime />} />
+        <Route path="/ghmc-plastic-ban-hyderabad" element={<GeoGHMCPlasticBan />} />
+        <Route path="/telangana-plastic-ban-guide" element={<GeoTelanganaPlasticBan />} />
+        <Route path="/how-to-spot-fake-biodegradable-bags" element={<GeoSpotFakeBiodegradable />} />
+        <Route path="/epr-compliance-packaging-india" element={<GeoEPRCompliance />} />
+        <Route path="/how-to-switch-to-biodegradable-bags" element={<GeoSwitchToEco />} />
+        <Route path="/cornstarch-vs-pbat-bags" element={<GeoCornstarchVsPBAT />} />
 
         {/* Phase 8: High plastic-consuming sector pages */}
         <Route path="/biodegradable-bags-sweet-shops" element={<IndustrySweetShops />} />
