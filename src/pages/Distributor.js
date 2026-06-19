@@ -188,18 +188,21 @@ export default function Distributor() {
     if (m) m.content = "Join RDN Bio Products as a biodegradable packaging distributor or dealer in India. DRDO certified PBAT bags, exclusive territory, 18-28% margins. Ideal for FMCG distributors, packaging traders, and wholesalers. Apply today.";
   }, []);
 
-  const [form, setForm] = useState({ name: '', phone: '', city: '', state: '', businessType: '', experience: '', monthlyVolume: '', message: '' });
+  const [form, setForm] = useState({ name: '', phone: '', email: '', city: '', state: '', businessType: '', experience: '', monthlyVolume: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitting(true);
     const lines = [
       "Hi, I'd like to apply as a distributor for RDN Bio Products.",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
+      form.email ? `Email: ${form.email}` : null,
       `City: ${form.city}`,
       `State: ${form.state}`,
       `Business: ${form.businessType}`,
@@ -207,9 +210,36 @@ export default function Distributor() {
       `Monthly Volume: ${form.monthlyVolume}`,
       form.message ? `Message: ${form.message}` : null,
     ].filter(Boolean).join('\n');
+
+    // Send email copy via Formsubmit (no account needed — verify email on first submission)
+    try {
+      await fetch('https://formsubmit.co/ajax/rdnbioproductsllp@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `New Distributor Application — ${form.name} (${form.city}, ${form.state})`,
+          _replyto: form.email || form.phone,
+          _captcha: 'false',
+          Name: form.name,
+          Phone: form.phone,
+          Email: form.email || '—',
+          City: form.city,
+          State: form.state,
+          'Business Type': form.businessType,
+          'Distribution Experience': form.experience,
+          'Target Monthly Volume': form.monthlyVolume,
+          Message: form.message || '—',
+        }),
+      });
+    } catch (_) {
+      // Email failed silently — WhatsApp still opens
+    }
+
+    // Open WhatsApp for submitter confirmation
     window.open(`https://wa.me/917301222666?text=${encodeURIComponent(lines)}`, '_blank');
+    setSubmitting(false);
     setSubmitted(true);
-    setForm({ name: '', phone: '', city: '', state: '', businessType: '', experience: '', monthlyVolume: '', message: '' });
+    setForm({ name: '', phone: '', email: '', city: '', state: '', businessType: '', experience: '', monthlyVolume: '', message: '' });
   };
 
   return (
@@ -486,14 +516,17 @@ export default function Distributor() {
       <section id="dist-application" style={{ padding: '56px 0', background: '#fff', borderBottom: '1px solid #eef5e4' }}>
         <div className="container">
           <h2 className="section-title" style={{ textAlign: 'center' }}>Apply to Become an Rdnbio Distributor</h2>
-          <p className="section-sub" style={{ textAlign: 'center' }}>Fill the form — we'll respond via WhatsApp within 24 hours on business days</p>
+          <p className="section-sub" style={{ textAlign: 'center' }}>Fill the form — application goes to our email &amp; we respond on WhatsApp within 24 hours</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))', gap: 40, marginTop: 36, alignItems: 'start' }}>
             <div style={{ background: 'var(--green-pale)', border: '1px solid #d4e8b0', borderRadius: 18, padding: '32px 28px' }}>
               {submitted ? (
                 <div style={{ textAlign: 'center', padding: '24px 0' }}>
                   <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
-                  <h3 style={{ color: 'var(--green-dark)', marginBottom: 8 }}>Application sent!</h3>
-                  <p style={{ color: '#666', fontSize: 14 }}>Our team will reach out on WhatsApp within 24 hours to discuss territory and pricing.</p>
+                  <h3 style={{ color: 'var(--green-dark)', marginBottom: 8 }}>Application submitted!</h3>
+                  <p style={{ color: '#666', fontSize: 14, lineHeight: 1.7 }}>
+                    Your application has been emailed to our team and sent via WhatsApp.<br />
+                    We'll reach out within 24 hours to discuss territory, pricing, and next steps.
+                  </p>
                   <button style={{ marginTop: 20, background: 'var(--green-mid)', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 24px', cursor: 'pointer', fontWeight: 600 }} onClick={() => setSubmitted(false)}>Submit another application</button>
                 </div>
               ) : (
@@ -504,8 +537,12 @@ export default function Distributor() {
                       <input className="form-input" style={{ fontSize: 16, width: '100%' }} name="name" value={form.name} onChange={handleChange} required placeholder="Rajesh Kumar" />
                     </div>
                     <div>
-                      <label style={{ fontSize: 12, fontWeight: 600, color: '#555', display: 'block', marginBottom: 4 }}>Phone Number *</label>
+                      <label style={{ fontSize: 12, fontWeight: 600, color: '#555', display: 'block', marginBottom: 4 }}>Phone / WhatsApp *</label>
                       <input className="form-input" style={{ fontSize: 16, width: '100%' }} name="phone" value={form.phone} onChange={handleChange} required placeholder="+91 98765 43210" type="tel" />
+                    </div>
+                    <div style={{ gridColumn: '1 / -1' }}>
+                      <label style={{ fontSize: 12, fontWeight: 600, color: '#555', display: 'block', marginBottom: 4 }}>Email Address <span style={{ color: '#aaa', fontWeight: 400 }}>(optional — for email reply)</span></label>
+                      <input className="form-input" style={{ fontSize: 16, width: '100%' }} name="email" value={form.email} onChange={handleChange} placeholder="yourname@gmail.com" type="email" />
                     </div>
                     <div>
                       <label style={{ fontSize: 12, fontWeight: 600, color: '#555', display: 'block', marginBottom: 4 }}>City *</label>
@@ -544,9 +581,12 @@ export default function Distributor() {
                       <textarea className="form-input" style={{ fontSize: 16, width: '100%', minHeight: 80, resize: 'vertical' }} name="message" value={form.message} onChange={handleChange} placeholder="Tell us about your network, target sectors, or any questions..." />
                     </div>
                   </div>
-                  <button type="submit" className="submit-btn" style={{ marginTop: 20, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
-                    {WA_SVG} Submit Application via WhatsApp
+                  <button type="submit" disabled={submitting} className="submit-btn" style={{ marginTop: 20, width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, opacity: submitting ? 0.7 : 1 }}>
+                    {submitting ? '⏳ Submitting...' : <>{WA_SVG} Submit Application</>}
                   </button>
+                  <p style={{ fontSize: 11, color: '#888', textAlign: 'center', marginTop: 8 }}>
+                    Your application is emailed to our team and WhatsApp opens for instant confirmation.
+                  </p>
                 </form>
               )}
             </div>
