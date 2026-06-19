@@ -552,15 +552,24 @@ export function Contact() {
                 <div className="card-header"><h3>Find us</h3></div>
                 <div className="card-body" style={{padding:0}}>
                   <iframe
-                    title="RDN Bio Products Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115.89!2d78.5300743!3d17.3456978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99003e3adc29%3A0x8cb137ae52564078!2sRDN%20Bio%20Products%20LLP!5e0!3m2!1sen!2sin!4v1234567890"
-                    width="100%" height="220" style={{border:0,display:'block'}} allowFullScreen loading="lazy"
+                    title="RDN Bio Products LLP — Factory, Karmanghat Hyderabad"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1!2d78.5574!3d17.3283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99003e3adc29%3A0x8cb137ae52564078!2sRDN%20Bio%20Products%20LLP!5e0!3m2!1sen!2sin!4v1718700000000"
+                    width="100%" height="280" style={{border:0,display:'block'}} allowFullScreen loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                   <div style={{padding:'12px 16px',fontSize:12,color:'#777',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-                    <span>Near Saroornagar · Easy access from ORR & NH-44</span>
-                    <a href="https://maps.google.com/?q=Karmanghat+Hyderabad" target="_blank" rel="noreferrer" style={{color:'var(--green-dark)',fontWeight:500,fontSize:12}}>Open in Maps →</a>
+                    <span>🏭 Factory — Karmanghat, Saroornagar · Near ORR & NH-44</span>
+                    <a href="https://share.google/VqaIpGNXjWGZutFis" target="_blank" rel="noreferrer" style={{color:'var(--green-dark)',fontWeight:500,fontSize:12}}>Open in Maps →</a>
                   </div>
                 </div>
+              </div>
+              {/* Office location card */}
+              <div style={{background:'var(--green-pale)',border:'1px solid #d4e8b0',borderRadius:12,padding:'14px 16px',marginBottom:20,display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:8}}>
+                <div>
+                  <div style={{fontSize:11,fontWeight:700,color:'#888',textTransform:'uppercase',marginBottom:3}}>🏢 Corporate Office</div>
+                  <div style={{fontSize:13,color:'#444',lineHeight:1.5}}>Sai Nagar, Saroornagar East, Hyderabad 500035</div>
+                </div>
+                <a href="https://share.google/vxBSyuV1GI2Mvcge0" target="_blank" rel="noreferrer" style={{color:'var(--green-dark)',fontWeight:600,fontSize:12,whiteSpace:'nowrap'}}>Open in Maps →</a>
               </div>
 
               <div className="card">
