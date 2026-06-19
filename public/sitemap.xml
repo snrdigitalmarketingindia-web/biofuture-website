@@ -515,4 +515,35 @@
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
   </url>
+  <!-- Phase 4+5: Sustainability enhanced + 4 new blog posts -->
+  <url>
+    <loc>https://rdnbio.com/#/sustainability</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/blog/biodegradable-bag-distributor-margins-india</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/blog/esg-green-packaging-india-brsr</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/blog/biodegradable-bags-andhra-pradesh-guide</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
+    <loc>https://rdnbio.com/#/blog/import-biodegradable-bags-india-uae-gulf</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
 </urlset>
