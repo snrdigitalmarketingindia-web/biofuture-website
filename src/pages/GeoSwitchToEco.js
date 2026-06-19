@@ -35,6 +35,20 @@ export default function GeoSwitchToEco() {
       { '@type': 'ListItem', position: 2, name: 'How to Switch to Biodegradable Bags', item: 'https://rdnbio.com/#/how-to-switch-to-biodegradable-bags' },
     ],
   };
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Switch Your Business from Plastic to Biodegradable Bags',
+    description: 'A step-by-step guide for Indian businesses switching from plastic carry bags to DRDO-certified biodegradable bags.',
+    totalTime: 'P3D',
+    step: STEPS.map(s => ({
+      '@type': 'HowToStep',
+      position: parseInt(s.step),
+      name: s.title,
+      text: s.desc,
+    })),
+  };
+
   const faqSchema = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: FAQS.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
@@ -43,6 +57,7 @@ export default function GeoSwitchToEco() {
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="page-hero page-hero--dark">

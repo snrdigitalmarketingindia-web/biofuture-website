@@ -53,6 +53,17 @@ const faqSchema = {
   ],
 };
 
+const speakableSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Biodegradable Carry Bags & Packaging Manufacturer India | RDN Bio Products Hyderabad',
+  url: 'https://rdnbio.com',
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.hero-quick-answer', '.drdo-badge'],
+  },
+};
+
 const industries = [
   {
     icon: '🛒',
@@ -150,6 +161,7 @@ export default function Home() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(manufacturerSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section style={{ background: 'linear-gradient(135deg,#f0fae6 0%,#e0f5c8 60%,#d4f0b0 100%)', padding: '52px 0 44px', borderBottom: '1px solid #c8e89a' }}>
